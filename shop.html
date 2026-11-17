@@ -19,6 +19,7 @@
             <link rel="stylesheet" href="Styles/page.css" />
         <script src="Scripts/page.js"></script>
         <script src="Scripts/departments.js"></script>
+        <script src="Scripts/shop.js"></script>
 </head>
 
     <body class="bg-alabaster min-h-screen flex flex-col antialiased">
@@ -200,131 +201,50 @@
                         <h3 class="font-serif text-xl font-bold text-obsidian mb-4 tracking-tight">Department</h3>
                         <ul class="space-y-2.5 text-xs text-taupeGray">
                             <li>
-                                <a class="flex items-center justify-between text-terracotta font-semibold group" href="#">
+                                <a class="flex items-center justify-between text-terracotta font-semibold group" data-category-filter="all" href="#">
+                                    <span>All Artworks</span>
+                                    <span class="text-[10px] bg-stoneSurface text-obsidian px-2 py-0.5 rounded group-hover:bg-terracotta group-hover:text-white transition-colors" data-category-count="all">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" data-category-filter="oil-paintings" href="#">
                                     <span>Oil Paintings</span>
-                                    <span class="text-[10px] bg-stoneSurface text-obsidian px-2 py-0.5 rounded group-hover:bg-terracotta group-hover:text-white transition-colors">38</span>
+                                    <span class="text-[10px] text-taupeGray" data-category-count="oil-paintings">3</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
+                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" data-category-filter="abstract-art" href="#">
                                     <span>Abstract Art</span>
-                                    <span class="text-[10px] text-taupeGray">24</span>
+                                    <span class="text-[10px] text-taupeGray" data-category-count="abstract-art">2</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
+                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" data-category-filter="landscape-paintings" href="#">
                                     <span>Landscape Paintings</span>
-                                    <span class="text-[10px] text-taupeGray">19</span>
+                                    <span class="text-[10px] text-taupeGray" data-category-count="landscape-paintings">4</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Canvas Prints</span>
-                                    <span class="text-[10px] text-taupeGray">42</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
+                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" data-category-filter="minimalist-art" href="#">
                                     <span>Minimalist Art</span>
-                                    <span class="text-[10px] text-taupeGray">16</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Watercolor</span>
-                                    <span class="text-[10px] text-taupeGray">11</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Portrait Art</span>
-                                    <span class="text-[10px] text-taupeGray">9</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Framed Sets</span>
-                                    <span class="text-[10px] text-taupeGray">14</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Modern Wall Art</span>
-                                    <span class="text-[10px] text-taupeGray">28</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center justify-between hover:text-obsidian transition-colors" href="#">
-                                    <span>Traditional Lacquer</span>
-                                    <span class="text-[10px] text-taupeGray">7</span>
+                                    <span class="text-[10px] text-taupeGray" data-category-count="minimalist-art">3</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <!-- Price Range Slider Filter -->
+                    <!-- Price Range Filter -->
                     <div class="border-b border-stoneBorder pb-8" data-purpose="price-filter">
                         <h3 class="font-serif text-xl font-bold text-obsidian mb-4 tracking-tight">Price</h3>
-                        <div class="space-y-4">
-                            <!-- Simulated Slider Track -->
-                            <div class="relative w-full h-1.5 bg-stoneBorder rounded-full">
-                                <div class="absolute left-[15%] right-[25%] h-full bg-terracotta rounded-full"></div>
-                                <!-- Left Knob -->
-                                <div class="absolute left-[15%] -top-1.5 w-4 h-4 bg-white border-2 border-terracotta rounded-full shadow cursor-pointer"></div>
-                                <!-- Right Knob -->
-                                <div class="absolute right-[25%] -top-1.5 w-4 h-4 bg-white border-2 border-terracotta rounded-full shadow cursor-pointer"></div>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="text-xs text-taupeGray">Min ($)
+                                    <input class="mt-1 w-full border border-stoneBorder px-2 py-2 text-xs text-obsidian focus:border-terracotta focus:ring-1 focus:ring-terracotta" data-price-min min="0" max="1200" type="number" value="0" />
+                                </label>
+                                <label class="text-xs text-taupeGray">Max ($)
+                                    <input class="mt-1 w-full border border-stoneBorder px-2 py-2 text-xs text-obsidian focus:border-terracotta focus:ring-1 focus:ring-terracotta" data-price-max min="0" max="1200" type="number" value="1200" />
+                                </label>
                             </div>
-                            <div class="flex items-center justify-between text-xs pt-2">
-                                <span class="text-taupeGray font-medium">Range:</span>
-                                <span class="text-obsidian font-bold tracking-wide">$50 — $1,200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Color Palette Filter -->
-                    <div class="border-b border-stoneBorder pb-8" data-purpose="colors-filter">
-                        <h3 class="font-serif text-xl font-bold text-obsidian mb-4 tracking-tight">Colors</h3>
-                        <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-xs text-taupeGray">
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-white border border-stoneBorder inline-block"></span>
-                                <span>White</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-stone-400 border border-stone-500 inline-block"></span>
-                                <span>Gray</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian font-medium text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-[#B85233] inline-block ring-2 ring-stone-200"></span>
-                                <span>Ochre / Red</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-neutral-900 inline-block"></span>
-                                <span>Black</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-slate-800 inline-block"></span>
-                                <span>Navy Blue</span>
-                            </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-obsidian">
-                                <span class="w-3.5 h-3.5 rounded-full bg-[#627254] inline-block"></span>
-                                <span>Sage Green</span>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Popular Size Filter -->
-                    <div class="border-b border-stoneBorder pb-8" data-purpose="size-filter">
-                        <h3 class="font-serif text-xl font-bold text-obsidian mb-4 tracking-tight">Popular Size</h3>
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <button class="px-3.5 py-1.5 border border-terracotta bg-terracotta text-white font-medium shadow-sm" type="button">
-                                40x60 cm
-                            </button>
-                            <button class="px-3.5 py-1.5 border border-stoneBorder bg-white text-taupeGray hover:border-obsidian hover:text-obsidian transition-colors" type="button">
-                                60x90 cm
-                            </button>
-                            <button class="px-3.5 py-1.5 border border-stoneBorder bg-white text-taupeGray hover:border-obsidian hover:text-obsidian transition-colors" type="button">
-                                80x120 cm
-                            </button>
-                            <button class="px-3.5 py-1.5 border border-stoneBorder bg-white text-taupeGray hover:border-obsidian hover:text-obsidian transition-colors" type="button">
-                                Square
-                            </button>
+                            <button class="text-xs font-semibold text-terracotta hover:text-obsidian transition-colors" data-reset-filters type="button">Reset filters</button>
                         </div>
                     </div>
                     <!-- Latest Artworks Mini-Slider -->
@@ -498,17 +418,16 @@
                         <!-- Sort Dropdown -->
                         <div class="flex items-center gap-2 text-xs">
                             <span class="text-taupeGray font-medium">Sort By:</span>
-                            <select class="border-0 bg-transparent text-xs font-bold text-obsidian pr-6 py-1 focus:ring-0 cursor-pointer">
-                                <option>Default</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                                <option>Curator's Choice</option>
-                                <option>Newest Arrivals</option>
+                            <select class="border-0 bg-transparent text-xs font-bold text-obsidian pr-6 py-1 focus:ring-0 cursor-pointer" data-sort-artworks>
+                                <option value="default">Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name: A to Z</option>
                             </select>
                         </div>
                         <!-- Product Count -->
                         <div class="text-xs text-taupeGray">
-                            <span class="font-bold text-obsidian">16</span> Artworks found
+                            <span class="font-bold text-obsidian" data-artwork-count>12</span> Artworks found
                         </div>
                         <!-- View Mode Toggles -->
                         <div class="flex items-center gap-2">
@@ -795,6 +714,7 @@
                             <span class="text-xs font-bold text-obsidian mt-1">$220.00</span>
                         </article>
                     </div>
+                    <p class="hidden py-10 text-center text-sm text-taupeGray" data-empty-results>No artworks match these filters.</p>
                     <!-- Pagination Bar -->
                     <nav aria-label="Pagination" class="flex items-center justify-center space-x-2 pt-6 border-t border-stoneBorder" data-purpose="catalog-pagination">
                         <a class="w-9 h-9 border border-terracotta bg-terracotta text-white flex items-center justify-center text-xs font-semibold shadow-sm" href="#">1</a>

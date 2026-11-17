@@ -20,6 +20,7 @@
             <link rel="stylesheet" href="Styles/shop-detail.css" />
         <script src="Scripts/shop-detail.js"></script>
         <script src="Scripts/departments.js"></script>
+        <script src="Scripts/cart.js"></script>
 </head>
 
     <body class="bg-alabaster text-obsidian min-h-screen flex flex-col antialiased selection:bg-terracotta selection:text-white">
@@ -110,15 +111,15 @@
                     </a>
                     <!-- Cart Value & Bag -->
                     <div class="flex items-center space-x-3 pl-3 border-l border-stone-border">
-                        <a aria-label="Shopping Bag" class="relative p-1 text-obsidian hover:text-terracotta transition-colors" href="#">
+                        <a aria-label="Shopping Bag" class="relative p-1 text-obsidian hover:text-terracotta transition-colors" href="shopping-cart.html">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                 <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
                             </svg>
-                            <span class="absolute -top-1 -right-1 bg-terracotta text-white font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+                            <span class="absolute -top-1 -right-1 bg-terracotta text-white font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold" data-cart-count>0</span>
                         </a>
                         <div class="hidden lg:flex flex-col text-left">
                             <span class="text-[10px] uppercase tracking-wider text-stone-muted leading-tight font-medium">CART VALUE</span>
-                            <span class="text-xs font-semibold text-obsidian">item: <span class="text-terracotta">$150.00</span></span>
+                            <span class="text-xs font-semibold text-obsidian">item: <span class="text-terracotta" data-cart-value>$0.00</span></span>
                         </div>
                     </div>
                 </div>
@@ -267,12 +268,12 @@
                         <div class="flex items-center gap-4 mb-8">
                             <!-- Quantity Counter -->
                             <div class="flex items-center bg-stone-surface border border-stone-border rounded-sm">
-                                <button aria-label="Decrease quantity" class="w-10 h-12 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">−</button>
-                                <input class="w-10 h-12 text-center bg-transparent border-0 focus:ring-0 text-xs font-semibold text-obsidian p-0" readonly="" type="text" value="1" />
-                                <button aria-label="Increase quantity" class="w-10 h-12 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">+</button>
+                                <button aria-label="Decrease quantity" class="w-10 h-12 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" data-product-decrease type="button">−</button>
+                                <input class="w-10 h-12 text-center bg-transparent border-0 focus:ring-0 text-xs font-semibold text-obsidian p-0" data-product-quantity readonly type="text" value="1" />
+                                <button aria-label="Increase quantity" class="w-10 h-12 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" data-product-increase type="button">+</button>
                             </div>
                             <!-- Add to Cart Button -->
-                            <button class="flex-1 bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3.5 text-xs font-semibold uppercase tracking-widest transition-colors rounded-sm shadow-sm flex items-center justify-center gap-2" type="button">
+                            <button class="flex-1 bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3.5 text-xs font-semibold uppercase tracking-widest transition-colors rounded-sm shadow-sm flex items-center justify-center gap-2" data-add-to-cart type="button">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                     <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                                 </svg>

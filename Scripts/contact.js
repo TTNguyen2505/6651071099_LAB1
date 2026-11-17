@@ -25,8 +25,17 @@ document.addEventListener('submit', event => {
 
     event.preventDefault();
     if (form.dataset.formAction === 'contact') {
-        alert('Thank you for contacting ARTGANI. An art advisor will respond within 2 hours.');
+        const dialog = document.querySelector('[data-notification-dialog]');
+        document.querySelector('[data-notification-title]').textContent = 'Message sent';
+        document.querySelector('[data-notification-message]').textContent = 'Thank you for contacting ARTGANI. An art advisor will respond within 2 hours.';
+        dialog.showModal();
     } else if (form.dataset.formAction === 'subscribe') {
         alert('Subscribed to ARTGANI collector updates.');
     }
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const dialog = document.querySelector('[data-notification-dialog]');
+    if (dialog && dialog.open) dialog.close();
 });

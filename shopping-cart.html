@@ -20,6 +20,7 @@
             <link rel="stylesheet" href="Styles/shopping-cart.css" />
         <script src="Scripts/shopping-cart.js"></script>
         <script src="Scripts/departments.js"></script>
+        <script src="Scripts/cart.js"></script>
 </head>
 
     <body class="bg-alabaster text-obsidian min-h-screen flex flex-col antialiased selection:bg-terracotta selection:text-white">
@@ -109,15 +110,15 @@
                     </a>
                     <!-- Cart Value & Bag -->
                     <div class="flex items-center space-x-3 pl-3 border-l border-stone-border">
-                        <a aria-label="Shopping Bag" class="relative p-1 text-obsidian hover:text-terracotta transition-colors" href="#">
+                        <a aria-label="Shopping Bag" class="relative p-1 text-obsidian hover:text-terracotta transition-colors" href="shopping-cart.html">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                 <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
                             </svg>
-                            <span class="absolute -top-1 -right-1 bg-terracotta text-white font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+                            <span class="absolute -top-1 -right-1 bg-terracotta text-white font-sans text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold" data-cart-count>0</span>
                         </a>
                         <div class="hidden lg:flex flex-col text-left">
                             <span class="text-[10px] uppercase tracking-wider text-stone-muted leading-tight font-medium">CART VALUE</span>
-                            <span class="text-xs font-semibold text-obsidian">item: <span class="text-terracotta">$420.00</span></span>
+                            <span class="text-xs font-semibold text-obsidian">item: <span class="text-terracotta" data-cart-value>$0.00</span></span>
                         </div>
                     </div>
                 </div>
@@ -193,94 +194,16 @@
                                     <th class="py-4 px-4 font-medium text-center w-1/12"><span class="sr-only">Remove</span></th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-stone-border/70 text-obsidian text-sm">
-                                <!-- Item Row 1: Sienna Horizon Canvas -->
-                                <tr class="hover:bg-stone-surface/20 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <div class="flex items-center gap-4">
-                                            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-stone-surface border border-stone-border p-1.5 rounded-sm flex-shrink-0 shadow-sm">
-                                                <img alt="Sienna Horizon Canvas" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAHoNcoYqyZFgY_sAdQp3UfuJv7-k5VB3ZXSVtV427WrOAUmWuqS9mGpKRKRQCaAaD9jAAVJPSjGHmPkDygwLrUBKp9wtv6hZe0qaUaHlPorJGO2TBhp4w_J6o86hfH6dIJpqbtoJ7ZkEHm5Re3NZ4uxy7bSNc5lgsS4sAs1MnuGtzA62bf7iNcNEfM4sQfFk7MPPc4Uek5VpBcZeMwFtEsi-thZyUXJjdi8mk_II26" />
-                                            </div>
-                                            <div>
-                                                <h3 class="font-serif-title text-base sm:text-lg font-semibold text-obsidian hover:text-terracotta transition-colors cursor-pointer">Sienna Horizon Canvas</h3>
-                                                <p class="text-xs text-stone-muted mt-0.5">Original Oil on Belgian Linen</p>
-                                                <p class="text-[11px] text-stone-muted uppercase tracking-wider mt-1">60 × 90 cm • Natural White Oak Float Frame</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base text-stone-muted">$140.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <div class="inline-flex items-center bg-stone-surface border border-stone-border rounded-sm mx-auto">
-                                            <button aria-label="Decrease quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">−</button>
-                                            <input class="w-8 h-9 text-center bg-transparent border-0 focus:ring-0 text-xs font-semibold text-obsidian p-0" readonly="" type="text" value="1" />
-                                            <button aria-label="Increase quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">+</button>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base font-semibold text-terracotta">$140.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <button aria-label="Remove Sienna Horizon Canvas" class="w-8 h-8 inline-flex items-center justify-center rounded-full text-stone-muted hover:text-terracotta hover:bg-stone-surface transition-colors text-lg font-medium" type="button">×</button>
-                                    </td>
-                                </tr>
-                                <!-- Item Row 2: Silent Arch Minimalist -->
-                                <tr class="hover:bg-stone-surface/20 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <div class="flex items-center gap-4">
-                                            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-stone-surface border border-stone-border p-1.5 rounded-sm flex-shrink-0 shadow-sm">
-                                                <img alt="Silent Arch Minimalist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrALIJU5bFlRfpOKCIC_Z6yi2-j9vAVnpIf5JuKdtrIc4U7o_p-8gtu8XN2WILEk-6h6wCqXtcUeeTi1DWwsWefOx3y6dTyCL5fJboyvbnocYaBrFeLHGsSXzjNaoW2bS0NbbOwYVhJprXzNlff2uRwfZu5oFPHkVymDCj5BuUkutYJusYE0zWqEzBbdwJDGVnlqUnjufvQabSyWHkACFr4QXtpSkrXnfbLnESNTOwL7kw" />
-                                            </div>
-                                            <div>
-                                                <h3 class="font-serif-title text-base sm:text-lg font-semibold text-obsidian hover:text-terracotta transition-colors cursor-pointer">Silent Arch Minimalist</h3>
-                                                <p class="text-xs text-stone-muted mt-0.5">Archival Acrylic on Raw Canvas</p>
-                                                <p class="text-[11px] text-stone-muted uppercase tracking-wider mt-1">50 × 50 cm • Solid Maple Floater</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base text-stone-muted">$120.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <div class="inline-flex items-center bg-stone-surface border border-stone-border rounded-sm mx-auto">
-                                            <button aria-label="Decrease quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">−</button>
-                                            <input class="w-8 h-9 text-center bg-transparent border-0 focus:ring-0 text-xs font-semibold text-obsidian p-0" readonly="" type="text" value="1" />
-                                            <button aria-label="Increase quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">+</button>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base font-semibold text-terracotta">$120.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <button aria-label="Remove Silent Arch Minimalist" class="w-8 h-8 inline-flex items-center justify-center rounded-full text-stone-muted hover:text-terracotta hover:bg-stone-surface transition-colors text-lg font-medium" type="button">×</button>
-                                    </td>
-                                </tr>
-                                <!-- Item Row 3: Botanical Mist Oil -->
-                                <tr class="hover:bg-stone-surface/20 transition-colors">
-                                    <td class="py-5 px-6">
-                                        <div class="flex items-center gap-4">
-                                            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-stone-surface border border-stone-border p-1.5 rounded-sm flex-shrink-0 shadow-sm">
-                                                <img alt="Botanical Mist Oil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCLEbyQ27fD8ZCWom1d1sJ6S9HB97fpbGDlgC9GMR8xCXPbw-jQF-AUxZPBpqroyudFoELLYSLwgYsEo_FLPl7f7gzsohhQoGHW-f7G5zfrGnpekIb5tcyPRJGGCQYxZgq7_rJ1KAG0Z23ZVqZITNhdEXd96Szlh9bW2XUkLQwE9ZjzsbmWv9K_PLOzUucfHA1fQcORmnbo16Q5nUabr-iz8njITsTSIZUiBMj_reg8Jg" />
-                                            </div>
-                                            <div>
-                                                <h3 class="font-serif-title text-base sm:text-lg font-semibold text-obsidian hover:text-terracotta transition-colors cursor-pointer">Botanical Mist Oil</h3>
-                                                <p class="text-xs text-stone-muted mt-0.5">Muted Landscape on Stretched Linen</p>
-                                                <p class="text-[11px] text-stone-muted uppercase tracking-wider mt-1">75 × 75 cm • Bespoke Obsidian Frame</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base text-stone-muted">$160.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <div class="inline-flex items-center bg-stone-surface border border-stone-border rounded-sm mx-auto">
-                                            <button aria-label="Decrease quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">−</button>
-                                            <input class="w-8 h-9 text-center bg-transparent border-0 focus:ring-0 text-xs font-semibold text-obsidian p-0" readonly="" type="text" value="1" />
-                                            <button aria-label="Increase quantity" class="w-8 h-9 flex items-center justify-center text-obsidian hover:text-terracotta transition-colors font-semibold" type="button">+</button>
-                                        </div>
-                                    </td>
-                                    <td class="py-5 px-4 text-center font-serif text-base font-semibold text-terracotta">$160.00</td>
-                                    <td class="py-5 px-4 text-center">
-                                        <button aria-label="Remove Botanical Mist Oil" class="w-8 h-8 inline-flex items-center justify-center rounded-full text-stone-muted hover:text-terracotta hover:bg-stone-surface transition-colors text-lg font-medium" type="button">×</button>
-                                    </td>
+                            <tbody class="divide-y divide-stone-border/70 text-obsidian text-sm" data-cart-items>
+                                <tr>
+                                    <td class="py-12 px-6 text-center text-stone-muted" colspan="5">Your shopping cart is empty.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <!-- Cart Action Buttons Footer Bar -->
                     <div class="bg-stone-surface/30 border-t border-stone-border p-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <a class="w-full sm:w-auto inline-flex items-center justify-center bg-stone-surface hover:bg-stone-border/80 border border-stone-border text-obsidian px-6 py-3 text-xs uppercase tracking-widest font-semibold rounded-sm transition-colors" href="#">
+                        <a class="w-full sm:w-auto inline-flex items-center justify-center bg-stone-surface hover:bg-stone-border/80 border border-stone-border text-obsidian px-6 py-3 text-xs uppercase tracking-widest font-semibold rounded-sm transition-colors" href="shop-detail.html">
                             CONTINUE SHOPPING
                         </a>
                         <button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-surface hover:bg-stone-border/80 border border-stone-border text-obsidian px-6 py-3 text-xs uppercase tracking-widest font-semibold rounded-sm transition-colors" type="button">
@@ -313,15 +236,15 @@
                         <div class="space-y-4 mb-6">
                             <div class="flex justify-between items-center text-sm">
                                 <span class="text-stone-muted font-medium">Subtotal</span>
-                                <span class="font-serif text-lg font-bold text-terracotta">$420.00</span>
+                                <span class="font-serif text-lg font-bold text-terracotta" data-cart-subtotal>$0.00</span>
                             </div>
                             <div class="h-px bg-stone-border"></div>
                             <div class="flex justify-between items-center text-base">
                                 <span class="text-obsidian font-semibold">Total</span>
-                                <span class="font-serif text-2xl font-bold text-terracotta">$420.00</span>
+                                <span class="font-serif text-2xl font-bold text-terracotta" data-cart-total>$0.00</span>
                             </div>
                         </div>
-                        <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white py-3.5 px-6 rounded-sm text-xs font-semibold uppercase tracking-widest transition-colors shadow-sm mb-4 text-center" type="button">
+                        <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white py-3.5 px-6 rounded-sm text-xs font-semibold uppercase tracking-widest transition-colors shadow-sm mb-4 text-center" data-proceed-to-checkout type="button">
                             PROCEED TO CHECKOUT
                         </button>
                         <div class="text-center">

@@ -12,8 +12,10 @@
 
 
             <link rel="stylesheet" href="Styles/checkout.css" />
+        <link rel="stylesheet" href="Styles/notification.css" />
         <script src="Scripts/checkout.js"></script>
         <script src="Scripts/departments.js"></script>
+        <script src="Scripts/cart.js"></script>
 </head>
 
     <body class="bg-art-alabaster text-art-charcoal antialiased min-h-screen flex flex-col justify-between">
@@ -110,16 +112,16 @@
                         </svg>
                         <span class="absolute -top-1 -right-1.5 bg-art-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
                     </a>
-                    <a href="#" class="flex items-center space-x-2 group">
+                    <a href="shopping-cart.html" class="flex items-center space-x-2 group">
                         <div class="relative p-1 text-art-charcoal group-hover:text-art-terracotta transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                             </svg>
-                            <span class="absolute -top-1 -right-1.5 bg-art-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+                            <span class="absolute -top-1 -right-1.5 bg-art-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold" data-cart-count>0</span>
                         </div>
                         <div class="text-[11px] leading-tight">
                             <span class="text-art-taupe uppercase text-[9px] tracking-wider block">Cart Value</span>
-                            <span class="font-bold text-art-charcoal font-sans">item: <span class="text-art-terracotta font-semibold">$420.00</span></span>
+                            <span class="font-bold text-art-charcoal font-sans">item: <span class="text-art-terracotta font-semibold" data-cart-value>$0.00</span></span>
                         </div>
                     </a>
                 </div>
@@ -338,42 +340,20 @@
                         </div>
 
                         <!-- Itemized Artworks List -->
-                        <div class="divide-y divide-art-border/70 py-1">
-                            <div class="py-3.5 flex items-center justify-between text-xs">
-                                <div class="pr-4">
-                                    <span class="font-medium text-art-charcoal block">Sienna Horizon Canvas</span>
-                                    <span class="text-[10px] text-art-taupe">Original Oil • Natural White Oak</span>
-                                </div>
-                                <span class="font-bold text-art-charcoal flex-shrink-0">$140.00</span>
-                            </div>
-
-                            <div class="py-3.5 flex items-center justify-between text-xs">
-                                <div class="pr-4">
-                                    <span class="font-medium text-art-charcoal block">Silent Arch Minimalist</span>
-                                    <span class="text-[10px] text-art-taupe">Archival Acrylic • Solid Maple Floater</span>
-                                </div>
-                                <span class="font-bold text-art-charcoal flex-shrink-0">$120.00</span>
-                            </div>
-
-                            <div class="py-3.5 flex items-center justify-between text-xs">
-                                <div class="pr-4">
-                                    <span class="font-medium text-art-charcoal block">Botanical Mist Oil</span>
-                                    <span class="text-[10px] text-art-taupe">Muted Landscape • Bespoke Obsidian</span>
-                                </div>
-                                <span class="font-bold text-art-charcoal flex-shrink-0">$160.00</span>
-                            </div>
+                        <div class="divide-y divide-art-border/70 py-1" data-checkout-items>
+                            <p class="py-5 text-xs text-art-taupe">Your shopping cart is empty.</p>
                         </div>
 
                         <!-- Subtotal Row -->
                         <div class="py-4 border-t border-b border-art-border flex items-center justify-between text-xs">
                             <span class="font-bold uppercase tracking-wider text-art-charcoal">Subtotal</span>
-                            <span class="font-bold text-art-charcoal text-sm">$420.00</span>
+                            <span class="font-bold text-art-charcoal text-sm" data-checkout-subtotal>$0.00</span>
                         </div>
 
                         <!-- Total Row -->
                         <div class="py-4 border-b border-art-border flex items-center justify-between text-xs">
                             <span class="font-bold uppercase tracking-wider text-art-charcoal">Total</span>
-                            <span class="font-bold text-art-terracotta text-lg">$420.00</span>
+                            <span class="font-bold text-art-terracotta text-lg" data-checkout-total>$0.00</span>
                         </div>
 
                         <!-- Payment Options & Guarantees -->
@@ -402,7 +382,7 @@
                         </div>
 
                         <!-- CTA Button -->
-                        <button class="w-full bg-art-terracotta hover:bg-art-terracotta-dark text-white py-4 px-6 text-xs font-bold tracking-[0.2em] uppercase transition-colors shadow-sm flex items-center justify-center gap-2">
+                        <button class="w-full bg-art-terracotta hover:bg-art-terracotta-dark text-white py-4 px-6 text-xs font-bold tracking-[0.2em] uppercase transition-colors shadow-sm flex items-center justify-center gap-2" data-place-order type="button">
                             <span>Place Order</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -536,7 +516,16 @@
                 </div>
             </div>
         </footer>
-
+        <dialog aria-labelledby="notification-title" class="site-notification" data-notification-dialog>
+            <div class="site-notification__content">
+                <div aria-hidden="true" class="site-notification__icon">✓</div>
+                <h2 class="site-notification__title" data-notification-title>Order received</h2>
+                <p class="site-notification__message" data-notification-message></p>
+                <form method="dialog">
+                    <button class="site-notification__close" type="submit">OK</button>
+                </form>
+            </div>
+        </dialog>
     </body>
 
 </html>

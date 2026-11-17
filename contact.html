@@ -14,6 +14,7 @@
 
 
             <link rel="stylesheet" href="Styles/contact.css" />
+        <link rel="stylesheet" href="Styles/notification.css" />
         <script src="Scripts/contact.js"></script>
         <script src="Scripts/departments.js"></script>
 </head>
@@ -524,7 +525,16 @@
                 </div>
             </div>
         </footer>
-
+        <dialog aria-labelledby="notification-title" class="site-notification" data-notification-dialog>
+            <div class="site-notification__content">
+                <div aria-hidden="true" class="site-notification__icon">✓</div>
+                <h2 class="site-notification__title" data-notification-title>Message sent</h2>
+                <p class="site-notification__message" data-notification-message></p>
+                <form method="dialog">
+                    <button class="site-notification__close" type="submit">OK</button>
+                </form>
+            </div>
+        </dialog>
     </body>
 
 </html>

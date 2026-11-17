@@ -31,3 +31,19 @@ document.addEventListener('submit', event => {
         alert('Subscribed to ARTGANI collector updates.');
     }
 });
+
+document.addEventListener('click', event => {
+    const button = event.target.closest('[data-place-order]');
+    if (!button) return;
+
+    const dialog = document.querySelector('[data-notification-dialog]');
+    document.querySelector('[data-notification-title]').textContent = 'Order received';
+    document.querySelector('[data-notification-message]').textContent = 'Thank you. Your order has been received.';
+    dialog.showModal();
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const dialog = document.querySelector('[data-notification-dialog]');
+    if (dialog && dialog.open) dialog.close();
+});
