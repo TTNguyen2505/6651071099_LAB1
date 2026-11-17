@@ -15,6 +15,7 @@
 
             <link rel="stylesheet" href="Styles/contact.css" />
         <script src="Scripts/contact.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="min-h-screen flex flex-col bg-alabaster">
@@ -86,7 +87,7 @@
                     <!-- Center Menu -->
                     <nav class="hidden md:flex items-center space-x-10 text-[13px] font-medium tracking-[0.15em] text-obsidian">
                         <a href="index.html" class="hover:text-terracotta transition-colors">HOME</a>
-                        <a href="page.html" class="hover:text-terracotta transition-colors">SHOP</a>
+                        <a href="shop.html" class="hover:text-terracotta transition-colors">SHOP</a>
                         <div class="relative group py-1"><button type="button" class="hover:text-terracotta transition-colors flex items-center gap-1">PAGES <span aria-hidden="true">v</span></button><div class="absolute top-full left-0 z-50 w-48 rounded-sm bg-obsidian py-2 text-alabaster shadow-xl opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible"><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shop-detail.html">Shop Detail</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shopping-cart.html">Shopping Cart</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="checkout.html">Checkout</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="blog-detail.html">Blog Details</a></div></div>
                         <a href="blog.html" class="hover:text-terracotta transition-colors">BLOG</a>
                         <!-- ACTIVE CONTACT TAB -->
@@ -135,7 +136,7 @@
                 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
                     <!-- 25% Left: Collapsed All Departments -->
                     <div class="w-full md:w-1/4">
-                        <button class="w-full bg-obsidian text-white px-5 py-3.5 flex items-center justify-between text-xs font-medium tracking-[0.15em] uppercase hover:bg-black transition-colors rounded-none">
+                        <button aria-expanded="false" class="w-full bg-obsidian text-white px-5 py-3.5 flex items-center justify-between text-xs font-medium tracking-[0.15em] uppercase hover:bg-black transition-colors rounded-none" data-department-toggle>
                             <div class="flex items-center gap-3">
                                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>

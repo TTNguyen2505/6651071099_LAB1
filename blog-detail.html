@@ -22,6 +22,7 @@
         <!-- END: Custom Styles -->
             <link rel="stylesheet" href="Styles/blog-detail.css" />
         <script src="Scripts/blog-detail.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="bg-alabaster text-obsidian min-h-screen flex flex-col">
@@ -70,7 +71,7 @@
                 <!-- Center Editorial Navigation Menu -->
                 <nav class="hidden lg:flex items-center space-x-8 text-[13px] font-medium tracking-widest uppercase">
                     <a class="text-obsidian hover:text-terracotta transition-colors" href="index.html">Home</a>
-                    <a class="text-obsidian hover:text-terracotta transition-colors" href="page.html">Shop</a>
+                    <a class="text-obsidian hover:text-terracotta transition-colors" href="shop.html">Shop</a>
                     <!-- Dropdown container active with Pages -->
                     <div class="relative nav-dropdown-trigger py-2">
                         <a class="text-terracotta font-semibold flex items-center gap-1.5 transition-colors" href="#">
@@ -115,7 +116,7 @@
             <div class="max-w-[1140px] mx-auto px-4 flex flex-col md:flex-row items-center gap-4">
                 <!-- Collapsed All Departments Dropdown Button -->
                 <div class="w-full md:w-1/4">
-                    <button class="w-full bg-obsidian hover:bg-[#252422] text-white px-5 py-3 rounded flex items-center justify-between text-xs tracking-widest uppercase font-medium transition-colors" type="button">
+                    <button aria-expanded="false" class="w-full bg-obsidian hover:bg-[#252422] text-white px-5 py-3 rounded flex items-center justify-between text-xs tracking-widest uppercase font-medium transition-colors" data-department-toggle type="button">
                         <div class="flex items-center space-x-3">
                             <i class="fa-solid fa-bars text-sm"></i>
                             <span>All Departments</span>

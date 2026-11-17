@@ -13,6 +13,7 @@
 
             <link rel="stylesheet" href="Styles/checkout.css" />
         <script src="Scripts/checkout.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="bg-art-alabaster text-art-charcoal antialiased min-h-screen flex flex-col justify-between">
@@ -78,7 +79,7 @@
                 <!-- Center Nav with active PAGES Dropdown -->
                 <nav class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-[0.18em] uppercase">
                     <a href="index.html" class="text-art-charcoal hover:text-art-terracotta transition-colors">Home</a>
-                    <a href="page.html" class="text-art-charcoal hover:text-art-terracotta transition-colors">Shop</a>
+                    <a href="shop.html" class="text-art-charcoal hover:text-art-terracotta transition-colors">Shop</a>
 
                     <!-- PAGES Dropdown active container -->
                     <div class="relative group">
@@ -131,7 +132,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
                     <!-- All Departments (25% width on desktop -> col-span-3) -->
                     <div class="md:col-span-3">
-                        <button class="w-full bg-art-charcoal hover:bg-black text-white h-11 px-4 flex items-center justify-between text-xs font-semibold tracking-wider uppercase transition-colors">
+                        <button aria-expanded="false" class="w-full bg-art-charcoal hover:bg-black text-white h-11 px-4 flex items-center justify-between text-xs font-semibold tracking-wider uppercase transition-colors" data-department-toggle>
                             <div class="flex items-center space-x-2.5">
                                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>

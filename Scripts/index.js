@@ -35,19 +35,6 @@ if (mobileMenuBtn && mobileDrawer) {
     });
 }
 
-// "All Departments" collapsible toggle for responsive/mobile screens
-const deptToggle = document.getElementById('deptAccordionToggle');
-const deptList = document.getElementById('deptList');
-const deptChevron = document.getElementById('deptChevron');
-if (deptToggle && deptList) {
-    deptToggle.addEventListener('click', () => {
-        deptList.classList.toggle('hidden');
-        if (deptChevron) {
-            deptChevron.classList.toggle('rotate-180');
-        }
-    });
-}
-
 // Featured Artworks Category Filter Tab functionality
 const filterTabs = document.querySelectorAll('.filter-tab');
 const artCards = document.querySelectorAll('.art-card');

@@ -18,6 +18,7 @@
 
             <link rel="stylesheet" href="Styles/page.css" />
         <script src="Scripts/page.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="bg-alabaster min-h-screen flex flex-col antialiased">
@@ -85,7 +86,7 @@
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex items-center space-x-10 text-[13px] font-medium tracking-widest uppercase">
                     <a class="text-obsidian hover:text-terracotta transition-colors py-1" href="index.html">Home</a>
-                    <a class="text-terracotta font-semibold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-terracotta" href="page.html">Shop</a>
+                    <a class="text-terracotta font-semibold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-terracotta" href="shop.html">Shop</a>
                     <div class="relative group py-1"><button type="button" class="text-obsidian hover:text-terracotta transition-colors flex items-center gap-1">Pages <span aria-hidden="true">v</span></button><div class="absolute top-full left-0 z-50 w-48 rounded-sm bg-obsidian py-2 text-alabaster shadow-xl opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible"><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shop-detail.html">Shop Detail</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shopping-cart.html">Shopping Cart</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="checkout.html">Checkout</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="blog-detail.html">Blog Details</a></div></div>
                     <a class="text-obsidian hover:text-terracotta transition-colors py-1" href="blog.html">Blog</a>
                     <a class="text-obsidian hover:text-terracotta transition-colors py-1" href="contact.html">Contact</a>
@@ -122,7 +123,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                     <!-- Department Toggle Button (25% width column) -->
                     <div class="lg:col-span-1">
-                        <button class="w-full bg-obsidian text-white px-5 py-3.5 flex items-center justify-between tracking-wider font-medium text-xs uppercase hover:bg-neutral-800 transition-colors shadow-sm" type="button">
+                        <button aria-expanded="false" class="w-full bg-obsidian text-white px-5 py-3.5 flex items-center justify-between tracking-wider font-medium text-xs uppercase hover:bg-neutral-800 transition-colors shadow-sm" data-department-toggle type="button">
                             <span class="flex items-center gap-3">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                     <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>

@@ -13,6 +13,7 @@
 
             <link rel="stylesheet" href="Styles/blog.css" />
         <script src="Scripts/blog.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="bg-[#FAF8F5] text-obsidian min-h-screen flex flex-col antialiased selection:bg-terracotta selection:text-white">
@@ -78,7 +79,7 @@
                 <!-- Center Nav Links -->
                 <nav class="hidden md:flex items-center space-x-10 text-[13px] font-medium tracking-[0.14em] uppercase text-obsidian">
                     <a href="index.html" class="py-2 hover:text-terracotta transition-colors">Home</a>
-                    <a href="page.html" class="py-2 hover:text-terracotta transition-colors">Shop</a>
+                    <a href="shop.html" class="py-2 hover:text-terracotta transition-colors">Shop</a>
                     <div class="relative group py-2"><button type="button" class="hover:text-terracotta transition-colors flex items-center gap-1">Pages <span aria-hidden="true">v</span></button><div class="absolute top-full left-0 z-50 w-48 rounded-sm bg-obsidian py-2 text-alabaster shadow-xl opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible"><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shop-detail.html">Shop Detail</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shopping-cart.html">Shopping Cart</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="checkout.html">Checkout</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="blog-detail.html">Blog Details</a></div></div>
                     <!-- Active BLOG tab -->
                     <a href="blog.html" class="relative py-2 text-terracotta transition-colors font-semibold">
@@ -126,7 +127,7 @@
                 <div class="max-w-[1440px] mx-auto px-6 sm:px-10 py-3 flex flex-col md:flex-row items-stretch md:items-center gap-4">
                     <!-- 25% Left: Collapsed All Departments -->
                     <div class="w-full md:w-1/4">
-                        <button class="w-full h-11 bg-obsidian text-[#FAF8F5] px-4 flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase transition-colors hover:bg-black/90">
+                        <button aria-expanded="false" class="w-full h-11 bg-obsidian text-[#FAF8F5] px-4 flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase transition-colors hover:bg-black/90" data-department-toggle>
                             <span class="flex items-center space-x-3">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>

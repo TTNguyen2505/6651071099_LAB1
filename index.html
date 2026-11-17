@@ -18,6 +18,7 @@
 
             <link rel="stylesheet" href="Styles/index.css" />
         <script src="Scripts/index.js"></script>
+        <script src="Scripts/departments.js"></script>
 </head>
 
     <body class="selection:bg-terracotta selection:text-white">
@@ -85,7 +86,7 @@
                         HOME
                         <span class="absolute bottom-0 left-0 w-full h-[2px] bg-terracotta"></span>
                     </a>
-                    <a class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors py-1" href="page.html">
+                    <a class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors py-1" href="shop.html">
                         SHOP
                     </a>
                     <div class="relative group py-1">
@@ -134,7 +135,7 @@
             <div class="hidden lg:hidden bg-stoneSurface border-b border-hairline px-6 py-6 transition-all duration-300" id="mobileDrawer">
                 <nav class="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-obsidian">
                     <a class="text-terracotta font-bold flex items-center justify-between" href="index.html">HOME <span>•</span></a>
-                    <a class="hover:text-terracotta" href="page.html">SHOP</a>
+                    <a class="hover:text-terracotta" href="shop.html">SHOP</a>
                     <a class="hover:text-terracotta" href="shop-detail.html">PAGES</a>
                     <a class="hover:text-terracotta" href="blog.html">BLOG</a>
                     <a class="hover:text-terracotta" href="contact.html">CONTACT</a>
@@ -153,7 +154,7 @@
                 <!-- LEFT SIDEBAR (25% -> 3 of 12 cols on desktop) -->
                 <div class="lg:col-span-3 w-full">
                     <!-- Deep Obsidian (#1A1918) Header Bar -->
-                    <button class="w-full bg-obsidian text-alabaster px-5 py-4 flex items-center justify-between font-sans text-xs uppercase tracking-[0.2em] font-bold transition-colors hover:bg-neutral-800" id="deptAccordionToggle">
+                    <button aria-controls="deptList" aria-expanded="true" class="w-full bg-obsidian text-alabaster px-5 py-4 flex items-center justify-between font-sans text-xs uppercase tracking-[0.2em] font-bold transition-colors hover:bg-neutral-800" data-department-menu="deptList" data-department-toggle id="deptAccordionToggle">
                         <div class="flex items-center gap-3">
                             <i class="w-4 h-4 text-antiqueBrass" data-lucide="menu"></i>
                             <span>All Departments</span>
