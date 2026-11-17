@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>ARTGANI — Curated Fine Art &amp; Wall Painting Gallery</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Google Fonts: Cormorant Garamond, Playfair Display & DM Sans -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+
+            <link rel="stylesheet" href="Styles/index.css" />
+        <script src="Scripts/index.js"></script>
+</head>
+
+    <body class="selection:bg-terracotta selection:text-white">
+        <!-- ======================================================== -->
+        <!-- 1. TOP UTILITY BAR & MAIN HEADER -->
+        <!-- ======================================================== -->
+        <!-- Slim Warm-Stone Utility Strip (#EFECE6) -->
+        <div class="bg-stoneSurface text-taupeMuted border-b border-hairline text-xs font-medium tracking-wide">
+            <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-2.5 flex flex-col md:flex-row items-center justify-between gap-2">
+                <!-- Left side info -->
+                <div class="flex items-center flex-wrap gap-4 text-center md:text-left justify-center md:justify-start">
+                    <a class="flex items-center gap-1.5 hover:text-terracotta transition-colors" href="mailto:hello@artgani.com">
+                        <i class="w-3.5 h-3.5 text-terracotta" data-lucide="mail"></i>
+                        <span>hello@artgani.com</span>
+                    </a>
+                    <span class="hidden md:inline-block w-1 h-1 rounded-full bg-hairline"></span>
+                    <div class="flex items-center gap-1.5 text-obsidian font-normal">
+                        <i class="w-3.5 h-3.5 text-antiqueBrass" data-lucide="shield-check"></i>
+                        <span>Complimentary Insured Shipping on Orders Over $99</span>
+                    </div>
+                </div>
+                <!-- Right side tools -->
+                <div class="flex items-center gap-5">
+                    <!-- Minimal Socials -->
+                    <div class="flex items-center gap-3 pr-4 border-r border-hairline">
+                        <a aria-label="Instagram" class="hover:text-terracotta transition-colors" href="#"><i class="w-3.5 h-3.5" data-lucide="instagram"></i></a>
+                        <a aria-label="Pinterest" class="hover:text-terracotta transition-colors" href="#"><i class="w-3.5 h-3.5" data-lucide="pin"></i></a>
+                        <a aria-label="Facebook" class="hover:text-terracotta transition-colors" href="#"><i class="w-3.5 h-3.5" data-lucide="facebook"></i></a>
+                        <a aria-label="Twitter" class="hover:text-terracotta transition-colors" href="#"><i class="w-3.5 h-3.5" data-lucide="twitter"></i></a>
+                    </div>
+                    <!-- Language Dropdown -->
+                    <div class="relative group cursor-pointer flex items-center gap-1 hover:text-obsidian transition-colors">
+                        <span>English</span>
+                        <i class="w-3 h-3 text-taupeMuted" data-lucide="chevron-down"></i>
+                    </div>
+                    <!-- Login Link -->
+                    <a class="flex items-center gap-1 hover:text-terracotta transition-colors pl-2" href="#">
+                        <i class="w-3.5 h-3.5" data-lucide="user"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Main Navigation Row on #FAF8F5 -->
+        <header class="bg-alabaster border-b border-hairline sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
+            <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-5 flex items-center justify-between">
+                <!-- Brand Wordmark (Editorial Serif) -->
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Drawer Toggle Button -->
+                    <button aria-label="Toggle navigation drawer" class="lg:hidden p-1.5 text-obsidian hover:text-terracotta transition-colors" id="mobileMenuBtn">
+                        <i class="w-6 h-6" data-lucide="menu"></i>
+                    </button>
+                    <a class="flex flex-col group" href="#">
+                        <span class="font-serif-display text-2xl md:text-3xl tracking-[0.25em] font-semibold text-obsidian group-hover:text-terracotta transition-colors">
+                            ARTGANI
+                        </span>
+                        <span class="text-[9px] tracking-[0.35em] uppercase text-taupeMuted -mt-1 font-sans">
+                            FINE ART &amp; FRAMING
+                        </span>
+                    </a>
+                </div>
+                <!-- Centered Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 xl:gap-10">
+                    <a class="relative font-sans text-xs uppercase tracking-[0.2em] font-semibold text-obsidian hover:text-terracotta transition-colors py-1" href="index.html">
+                        HOME
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-terracotta"></span>
+                    </a>
+                    <a class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors py-1" href="page.html">
+                        SHOP
+                    </a>
+                    <div class="relative group py-1">
+                        <button type="button" class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors flex items-center gap-1">
+                            PAGES <span aria-hidden="true">v</span>
+                        </button>
+                        <div class="absolute top-full left-0 z-50 w-48 rounded-sm border border-stone-700 bg-obsidian py-2 text-alabaster shadow-xl opacity-0 invisible transition-all duration-150 group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible">
+                            <a class="block px-4 py-2 text-xs hover:text-terracotta" href="shop-detail.html">Shop Detail</a>
+                            <a class="block px-4 py-2 text-xs hover:text-terracotta" href="shopping-cart.html">Shopping Cart</a>
+                            <a class="block px-4 py-2 text-xs hover:text-terracotta" href="checkout.html">Checkout</a>
+                            <a class="block px-4 py-2 text-xs hover:text-terracotta" href="blog-detail.html">Blog Details</a>
+                        </div>
+                    </div>
+                    <a class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors py-1" href="blog.html">
+                        BLOG
+                    </a>
+                    <a class="font-sans text-xs uppercase tracking-[0.2em] font-medium text-taupeMuted hover:text-terracotta transition-colors py-1" href="contact.html">
+                        CONTACT
+                    </a>
+                </nav>
+                <!-- Right-aligned Wishlist & Cart -->
+                <div class="flex items-center gap-6">
+                    <!-- Wishlist -->
+                    <a class="relative p-1 text-obsidian hover:text-terracotta transition-colors flex items-center" href="#" title="Saved Artworks">
+                        <i class="w-5 h-5" data-lucide="heart"></i>
+                        <span class="absolute -top-1.5 -right-2 bg-terracotta text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                            1
+                        </span>
+                    </a>
+                    <!-- Cart with live count & price -->
+                    <a class="flex items-center gap-3 pl-3 border-l border-hairline hover:opacity-90 transition-opacity" href="#">
+                        <div class="relative p-1 text-obsidian">
+                            <i class="w-5 h-5" data-lucide="shopping-bag"></i>
+                            <span class="absolute -top-1.5 -right-2 bg-terracotta text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                                3
+                            </span>
+                        </div>
+                        <div class="hidden sm:flex flex-col text-left">
+                            <span class="text-[10px] uppercase tracking-wider text-taupeMuted">Cart Value</span>
+                            <span class="text-xs font-semibold text-obsidian font-mono">item: $150.00</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Mobile Drawer (Toggled via JS) -->
+            <div class="hidden lg:hidden bg-stoneSurface border-b border-hairline px-6 py-6 transition-all duration-300" id="mobileDrawer">
+                <nav class="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-obsidian">
+                    <a class="text-terracotta font-bold flex items-center justify-between" href="index.html">HOME <span>•</span></a>
+                    <a class="hover:text-terracotta" href="page.html">SHOP</a>
+                    <a class="hover:text-terracotta" href="shop-detail.html">PAGES</a>
+                    <a class="hover:text-terracotta" href="blog.html">BLOG</a>
+                    <a class="hover:text-terracotta" href="contact.html">CONTACT</a>
+                    <div class="pt-4 border-t border-hairline text-xs font-normal text-taupeMuted flex flex-col gap-2">
+                        <span>Curator Hotline: +65 11.188.888</span>
+                        <span>hello@artgani.com</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ======================================================== -->
+        <!-- 2. HERO & DEPARTMENT NAVIGATION SECTION (25% / 75% Split) -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 pt-8 pb-12" id="departments">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- LEFT SIDEBAR (25% -> 3 of 12 cols on desktop) -->
+                <div class="lg:col-span-3 w-full">
+                    <!-- Deep Obsidian (#1A1918) Header Bar -->
+                    <button class="w-full bg-obsidian text-alabaster px-5 py-4 flex items-center justify-between font-sans text-xs uppercase tracking-[0.2em] font-bold transition-colors hover:bg-neutral-800" id="deptAccordionToggle">
+                        <div class="flex items-center gap-3">
+                            <i class="w-4 h-4 text-antiqueBrass" data-lucide="menu"></i>
+                            <span>All Departments</span>
+                        </div>
+                        <i class="w-4 h-4 transition-transform duration-200" data-lucide="chevron-down" id="deptChevron"></i>
+                    </button>
+                    <!-- Category list -->
+                    <div class="bg-alabaster border border-hairline border-t-0 shadow-sm flex flex-col divide-y divide-hairline" id="deptList">
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Oil Paintings</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Abstract Art</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Landscape Paintings</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Canvas Prints</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Minimalist Art</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Watercolor</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Portrait Art</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Framed Sets</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Modern Wall Art</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                        <a class="cat-item-hover text-xs font-medium text-obsidian px-5 py-3.5 transition-all duration-200 flex items-center justify-between" href="#shop">
+                            <span>Traditional Lacquer</span>
+                            <i class="w-3.5 h-3.5 text-taupeMuted opacity-60" data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+                    <!-- Mini Exhibition Curator Callout underneath categories -->
+                    <div class="mt-4 p-4 bg-stoneSurface border border-hairline hidden lg:block">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-antiqueBrass block mb-1">Archival Standards</span>
+                        <p class="text-xs text-taupeMuted leading-relaxed">
+                            Every canvas is sealed with acid-free museum varnish guaranteeing UV longevity for over 100 years.
+                        </p>
+                    </div>
+                </div>
+                <!-- RIGHT MAIN AREA (75% -> 9 of 12 cols on desktop) -->
+                <div class="lg:col-span-9 flex flex-col gap-6 w-full">
+                    <!-- Top Search & Support Row -->
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <!-- Integrated Search Bar -->
+                        <div class="flex-1 w-full flex items-center border border-hairline bg-white shadow-sm h-12">
+                            <!-- Category dropdown -->
+                            <div class="relative border-r border-hairline px-3 md:px-4 py-2 flex items-center gap-2 cursor-pointer bg-stoneSurface/40 hover:bg-stoneSurface text-obsidian text-xs font-medium whitespace-nowrap">
+                                <span>All Categories</span>
+                                <i class="w-3 h-3 text-taupeMuted" data-lucide="chevron-down"></i>
+                            </div>
+                            <!-- Text Input -->
+                            <div class="flex-1 flex items-center px-4">
+                                <input class="w-full bg-transparent text-xs text-obsidian placeholder:text-taupeMuted/70 focus:outline-none" placeholder="Search by artist, style, or subject..." type="text" />
+                            </div>
+                            <!-- Solid Terracotta Search Button -->
+                            <button class="bg-terracotta hover:bg-terracottaHover text-white px-6 h-full flex items-center justify-center font-sans text-xs font-bold uppercase tracking-[0.15em] transition-colors">
+                                SEARCH
+                            </button>
+                        </div>
+                        <!-- Curator Phone Support Badge -->
+                        <div class="flex items-center gap-3.5 pl-2 md:pl-4 self-center md:self-auto">
+                            <div class="w-11 h-11 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta flex-shrink-0 shadow-inner">
+                                <i class="w-5 h-5" data-lucide="phone-call"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold tracking-tight text-obsidian font-sans">+65 11.188.888</span>
+                                <span class="text-[11px] text-taupeMuted tracking-normal">Curator support 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Hero Banner (Framed Soft Warm Stone #EFECE6 Showcase) -->
+                    <div class="relative bg-stoneSurface border border-hairline overflow-hidden p-8 sm:p-10 md:p-12 lg:p-14 min-h-[440px] flex flex-col justify-center">
+                        <!-- Background subtle accent architecture framing line -->
+                        <div class="absolute inset-3 border border-hairline/60 pointer-events-none"></div>
+                        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                            <!-- Left Editorial Text Content (7 cols) -->
+                            <div class="md:col-span-7 flex flex-col items-start space-y-4">
+                                <div class="inline-flex items-center gap-2">
+                                    <span class="w-5 h-[1.5px] bg-terracotta"></span>
+                                    <span class="text-[11px] uppercase tracking-[0.25em] font-bold text-terracotta">
+                                        CURATED EXHIBITION 2026
+                                    </span>
+                                </div>
+                                <h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-obsidian leading-[1.08] font-normal">
+                                    Original Fine Art <br /><span class="italic font-serif-display font-normal text-antiqueBrass">&amp; Framing</span>
+                                </h1>
+                                <p class="text-xs sm:text-sm text-taupeMuted max-w-md leading-relaxed font-normal">
+                                    Museum-grade archival canvas &amp; handcrafted solid wood frames tailored to transform residential and commercial interior spaces.
+                                </p>
+                                <div class="pt-3 flex flex-wrap items-center gap-4">
+                                    <a class="bg-terracotta hover:bg-terracottaHover text-white px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-bold transition-all duration-200 shadow-sm hover:shadow-md" href="#featured">
+                                        EXPLORE GALLERY
+                                    </a>
+                                    <span class="text-xs text-taupeMuted italic hidden sm:inline-block font-editorial text-base">
+                                        Over 1,400+ authenticated original canvases
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Right Visual Showcase: Oversized Framed Painting in Warm Minimalist Space (5 cols) -->
+                            <div class="md:col-span-5 flex justify-center md:justify-end">
+                                <div class="relative group max-w-[340px] w-full">
+                                    <!-- Outer Museum Frame with Matte Board -->
+                                    <div class="bg-white p-3.5 border-4 border-obsidian art-frame-deep transition-transform duration-500 group-hover:scale-[1.02]">
+                                        <!-- Inset Painting Artwork Canvas -->
+                                        <div class="relative aspect-[4/5] overflow-hidden bg-neutral-900">
+                                            <img alt="Oversized Framed Abstract Painting 'Echoes of Earth'" class="w-full h-full object-cover brightness-95 contrast-105" loading="eager" src="Images/image-11554f99fbde9138.jpg" />
+                                            <!-- Subtle canvas glaze glare -->
+                                            <div class="absolute inset-0 bg-gradient-to-tr from-obsidian/30 via-transparent to-white/10 pointer-events-none"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Brass Gallery Plaque -->
+                                    <div class="mt-3 text-center">
+                                        <span class="inline-block bg-[#1A1918] text-[#FAF8F5] text-[9px] uppercase tracking-[0.25em] px-3 py-1 font-mono">
+                                            Lot #8402 • Elena Vance • 140 × 110 cm
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 3. CATEGORY CAROUSEL (4-Column Grid with Nav Arrows) -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-10 border-t border-hairline">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.25em] text-antiqueBrass font-semibold block mb-1">COLLECTIONS</span>
+                    <h2 class="font-editorial text-2xl md:text-3xl text-obsidian font-normal">Explore By Department</h2>
+                </div>
+                <!-- Minimalist Square Arrow Controls -->
+                <div class="flex items-center gap-2">
+                    <button aria-label="Previous Category" class="w-10 h-10 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors" id="catPrev">
+                        <i class="w-4 h-4" data-lucide="chevron-left"></i>
+                    </button>
+                    <button aria-label="Next Category" class="w-10 h-10 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors" id="catNext">
+                        <i class="w-4 h-4" data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- 4 Equal Square Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: OIL PAINTINGS -->
+                <a class="group relative bg-stoneSurface border border-hairline overflow-hidden p-4 flex flex-col items-center justify-between aspect-square transition-all duration-300 hover:border-obsidian" href="#shop">
+                    <div class="w-full h-[76%] overflow-hidden bg-stoneSurface p-2 flex items-center justify-center">
+                        <img alt="Oil Paintings Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 art-shadow" src="Images/image-27706ac2b29443f7.jpg" />
+                    </div>
+                    <div class="w-full bg-alabaster border border-hairline py-3 text-center transition-colors duration-200 group-hover:bg-obsidian">
+                        <span class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-obsidian group-hover:text-alabaster">
+                            OIL PAINTINGS
+                        </span>
+                    </div>
+                </a>
+                <!-- Card 2: ABSTRACT ART -->
+                <a class="group relative bg-stoneSurface border border-hairline overflow-hidden p-4 flex flex-col items-center justify-between aspect-square transition-all duration-300 hover:border-obsidian" href="#shop">
+                    <div class="w-full h-[76%] overflow-hidden bg-stoneSurface p-2 flex items-center justify-center">
+                        <img alt="Abstract Art Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 art-shadow" src="Images/image-11554f99fbde9138.jpg" />
+                    </div>
+                    <div class="w-full bg-alabaster border border-hairline py-3 text-center transition-colors duration-200 group-hover:bg-obsidian">
+                        <span class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-obsidian group-hover:text-alabaster">
+                            ABSTRACT ART
+                        </span>
+                    </div>
+                </a>
+                <!-- Card 3: LANDSCAPE -->
+                <a class="group relative bg-stoneSurface border border-hairline overflow-hidden p-4 flex flex-col items-center justify-between aspect-square transition-all duration-300 hover:border-obsidian" href="#shop">
+                    <div class="w-full h-[76%] overflow-hidden bg-stoneSurface p-2 flex items-center justify-center">
+                        <img alt="Landscape Paintings Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 art-shadow" src="Images/image-f8b21ef590adaf4c.jpg" />
+                    </div>
+                    <div class="w-full bg-alabaster border border-hairline py-3 text-center transition-colors duration-200 group-hover:bg-obsidian">
+                        <span class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-obsidian group-hover:text-alabaster">
+                            LANDSCAPE
+                        </span>
+                    </div>
+                </a>
+                <!-- Card 4: MINIMALIST -->
+                <a class="group relative bg-stoneSurface border border-hairline overflow-hidden p-4 flex flex-col items-center justify-between aspect-square transition-all duration-300 hover:border-obsidian" href="#shop">
+                    <div class="w-full h-[76%] overflow-hidden bg-stoneSurface p-2 flex items-center justify-center">
+                        <svg class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 art-shadow" viewbox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="warmBg" x1="0" x2="1" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#F4EFEA"></stop>
+                                    <stop offset="100%" stop-color="#E2DDD5"></stop>
+                                </lineargradient>
+                                <lineargradient id="archGrad" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#B85233"></stop>
+                                    <stop offset="100%" stop-color="#8E3C22"></stop>
+                                </lineargradient>
+                                <lineargradient id="brassGrad" x1="0" x2="1" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#CBB079"></stop>
+                                    <stop offset="100%" stop-color="#9A7736"></stop>
+                                </lineargradient>
+                            </defs>
+                            <rect fill="url(#warmBg)" height="320" width="320"></rect>
+                            <rect fill="#FAF8F5" height="272" stroke="#E2DDD5" stroke-width="1.5" width="272" x="24" y="24"></rect>
+                            <!-- Minimalist Geometric Arches and Forms -->
+                            <circle cx="160" cy="115" fill="url(#brassGrad)" opacity="0.9" r="54"></circle>
+                            <path d="M 100 240 L 100 160 A 60 60 0 0 1 220 160 L 220 240 Z" fill="url(#archGrad)"></path>
+                            <circle cx="160" cy="190" fill="#1A1918" r="28"></circle>
+                            <line stroke="#1A1918" stroke-width="2" x1="80" x2="240" y1="240" y2="240"></line>
+                            <line stroke="#B58E4C" stroke-width="1.5" x1="160" x2="160" y1="50" y2="85"></line>
+                        </svg>
+                    </div>
+                    <div class="w-full bg-alabaster border border-hairline py-3 text-center transition-colors duration-200 group-hover:bg-obsidian">
+                        <span class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-obsidian group-hover:text-alabaster">
+                            MINIMALIST
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 4. FEATURED ARTWORKS (Filterable 4x2 Product Grid) -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 border-t border-hairline" id="featured">
+            <!-- Centered Serif Heading with Terracotta Accent Line -->
+            <div class="text-center max-w-md mx-auto mb-10">
+                <h2 class="font-editorial text-3xl sm:text-4xl text-obsidian font-normal">
+                    Featured Artworks
+                </h2>
+                <div class="w-12 h-[2px] bg-terracotta mx-auto mt-3 mb-6"></div>
+                <!-- Filter Tabs -->
+                <div class="flex items-center justify-center flex-wrap gap-6 text-xs uppercase tracking-[0.18em]">
+                    <button class="filter-tab active font-bold text-terracotta relative pb-1 transition-colors" data-category="all">
+                        All
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-terracotta"></span>
+                    </button>
+                    <button class="filter-tab font-medium text-taupeMuted hover:text-obsidian pb-1 transition-colors" data-category="abstract">
+                        Abstract
+                    </button>
+                    <button class="filter-tab font-medium text-taupeMuted hover:text-obsidian pb-1 transition-colors" data-category="landscape">
+                        Landscape
+                    </button>
+                    <button class="filter-tab font-medium text-taupeMuted hover:text-obsidian pb-1 transition-colors" data-category="oil">
+                        Oil Painting
+                    </button>
+                    <button class="filter-tab font-medium text-taupeMuted hover:text-obsidian pb-1 transition-colors" data-category="minimalist">
+                        Minimalist
+                    </button>
+                </div>
+            </div>
+            <!-- 8 Artwork Cards: 4-Column by 2-Row Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7" id="productGrid">
+                <!-- Item 1 -->
+                <div class="art-card group flex flex-col" data-cat="abstract">
+                    <!-- Square Warm Stone (#EFECE6) Mat-board frame -->
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <!-- Painting Canvas with art shadow -->
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Sienna Horizon Canvas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-11554f99fbde9138.jpg" />
+                        </div>
+                        <!-- Quick action hover overlay -->
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors" title="Add to Wishlist">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors" title="Quick View">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors" title="Add to Cart">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Artwork Details -->
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Sienna Horizon Canvas
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$120.00</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="art-card group flex flex-col" data-cat="minimalist">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <!-- Sale Tag in Muted Antique Brass -->
+                        <span class="absolute top-3 left-3 bg-antiqueBrass text-alabaster text-[9px] uppercase tracking-widest px-2 py-0.5 font-bold z-10">
+                            EXHIBITION SALE
+                        </span>
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                            <svg class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" viewbox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="#FAF7F2" height="280" width="280"></rect>
+                                <circle cx="140" cy="110" fill="#B58E4C" opacity="0.85" r="50"></circle>
+                                <path d="M 85 220 L 85 150 A 55 55 0 0 1 195 150 L 195 220 Z" fill="#B85233"></path>
+                                <circle cx="140" cy="165" fill="#1A1918" r="22"></circle>
+                                <line stroke="#1A1918" stroke-width="2" x1="60" x2="220" y1="220" y2="220"></line>
+                            </svg>
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Silent Arch Minimalist
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$95.00 <span class="text-taupeMuted line-through font-normal ml-1">$130.00</span></p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="art-card group flex flex-col" data-cat="oil">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Autumn Nocturne Oil" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-27706ac2b29443f7.jpg" />
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Autumn Nocturne Oil
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$240.00</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="art-card group flex flex-col" data-cat="landscape">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Alpine Mist &amp; Pine Study" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-f8b21ef590adaf4c.jpg" />
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Alpine Mist &amp; Pine Study
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$185.00</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="art-card group flex flex-col" data-cat="abstract">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Terracotta Ochre Study" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-27706ac2b29443f7.jpg" />
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Terracotta Ochre Study
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$140.00</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="art-card group flex flex-col" data-cat="landscape">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Ethereal Shoreline Diptych" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-f8b21ef590adaf4c.jpg" />
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Ethereal Shoreline Diptych
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$160.00</p>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="art-card group flex flex-col" data-cat="oil">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Venetian Canal Reflections" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Images/image-11554f99fbde9138.jpg" />
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Venetian Canal Reflections
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$310.00</p>
+                    </div>
+                </div>
+                <!-- Item 8 -->
+                <div class="art-card group flex flex-col" data-cat="minimalist">
+                    <div class="relative bg-stoneSurface border border-hairline p-5 aspect-square flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-obsidian">
+                        <div class="w-[82%] h-[82%] relative overflow-hidden bg-white p-1 border border-hairline shadow-md group-hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                            <svg class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" viewbox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="#F6F3EE" height="280" width="280"></rect>
+                                <rect fill="none" height="180" stroke="#E2DDD5" stroke-width="2" width="180" x="50" y="50"></rect>
+                                <circle cx="140" cy="140" fill="#B58E4C" opacity="0.3" r="60"></circle>
+                                <rect fill="#B85233" height="110" opacity="0.9" width="80" x="90" y="80"></rect>
+                                <circle cx="170" cy="170" fill="#1A1918" r="35"></circle>
+                                <line stroke="#1A1918" stroke-width="1.5" x1="70" x2="210" y1="210" y2="210"></line>
+                            </svg>
+                        </div>
+                        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="heart"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="eye"></i>
+                            </button>
+                            <button class="w-9 h-9 rounded-full bg-alabaster border border-hairline text-obsidian hover:bg-terracotta hover:text-white flex items-center justify-center shadow-md transition-colors">
+                                <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-editorial text-lg text-obsidian font-medium group-hover:text-terracotta transition-colors">
+                            Geometric Balance No. 4
+                        </h3>
+                        <p class="text-xs font-semibold text-obsidian mt-1 font-mono tracking-tight">$110.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 5. DUAL PROMOTIONAL BANNERS (2-Column Equal Split) -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left Banner: Muted Sage-Sand Background (#E3E6DF) -->
+                <div class="bg-sageSand border border-hairline p-8 lg:p-10 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group">
+                    <!-- Botanical Landscape Framed on Left -->
+                    <div class="w-full sm:w-1/2 flex-shrink-0 flex justify-center">
+                        <div class="bg-white p-2.5 border-2 border-obsidian art-shadow max-w-[200px] w-full transform -rotate-1 group-hover:rotate-0 transition-transform duration-500">
+                            <div class="aspect-[3/4] overflow-hidden bg-neutral-100">
+                                <img alt="Botanical Landscape Artwork" class="w-full h-full object-cover" src="Images/image-f8b21ef590adaf4c.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right-aligned Editorial Content -->
+                    <div class="w-full sm:w-1/2 flex flex-col items-start sm:items-end text-left sm:text-right space-y-3">
+                        <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-antiqueBrass">CURATOR'S PICK</span>
+                        <h3 class="font-editorial text-2xl lg:text-3xl text-obsidian leading-tight font-normal">
+                            Living Room Curations
+                        </h3>
+                        <p class="text-xs text-taupeMuted font-sans">
+                            100% Hand-Painted Originals
+                        </p>
+                        <div class="pt-2">
+                            <a class="bg-obsidian hover:bg-neutral-800 text-alabaster px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-bold inline-block transition-colors" href="#shop">
+                                SHOP NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Banner: Warm Clay-Cream Background (#EFE2D5) -->
+                <div class="bg-clayCream border border-hairline p-8 lg:p-10 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group">
+                    <!-- Triptych Set on Left -->
+                    <div class="w-full sm:w-1/2 flex-shrink-0 flex items-center justify-center gap-1.5">
+                        <!-- 3 mini framed prints with distinct warm abstract SVG tones -->
+                        <div class="bg-white p-1 border border-obsidian shadow-sm w-16 aspect-[2/3] transform -translate-y-1 overflow-hidden">
+                            <svg class="w-full h-full object-cover" viewbox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="#EFE2D5" height="90" width="60"></rect>
+                                <circle cx="30" cy="35" fill="#B85233" opacity="0.8" r="16"></circle>
+                                <path d="M 12 75 L 12 50 A 18 18 0 0 1 48 50 L 48 75 Z" fill="#B58E4C"></path>
+                                <circle cx="30" cy="55" fill="#1A1918" r="7"></circle>
+                            </svg>
+                        </div>
+                        <div class="bg-white p-1 border border-obsidian shadow-md w-16 aspect-[2/3] overflow-hidden">
+                            <svg class="w-full h-full object-cover" viewbox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="#FAF8F5" height="90" width="60"></rect>
+                                <rect fill="none" height="60" stroke="#E2DDD5" width="40" x="10" y="15"></rect>
+                                <path d="M 15 45 Q 30 20 45 45 Q 30 70 15 45" fill="#B85233" opacity="0.9"></path>
+                                <circle cx="30" cy="45" fill="#B58E4C" r="8"></circle>
+                                <circle cx="30" cy="45" fill="#1A1918" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="bg-white p-1 border border-obsidian shadow-sm w-16 aspect-[2/3] transform translate-y-1 overflow-hidden">
+                            <svg class="w-full h-full object-cover" viewbox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="#EFECE6" height="90" width="60"></rect>
+                                <circle cx="30" cy="45" fill="#B58E4C" opacity="0.75" r="18"></circle>
+                                <line stroke="#1A1918" stroke-width="1.5" x1="10" x2="50" y1="65" y2="65"></line>
+                                <rect fill="#B85233" height="35" width="16" x="22" y="25"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Right-aligned Content -->
+                    <div class="w-full sm:w-1/2 flex flex-col items-start sm:items-end text-left sm:text-right space-y-3">
+                        <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-terracotta">GALLERY WALL BUNDLE</span>
+                        <h3 class="font-editorial text-2xl lg:text-3xl text-obsidian leading-tight font-normal">
+                            Modern Triptych Sets
+                        </h3>
+                        <p class="text-xs text-taupeMuted font-sans">
+                            Save 25% on Gallery Wall Bundles
+                        </p>
+                        <div class="pt-2">
+                            <a class="bg-terracotta hover:bg-terracottaHover text-white px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-bold inline-block transition-colors" href="#shop">
+                                SHOP NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 6. THREE-COLUMN ARTWORK SLIDERS -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-14 border-t border-hairline">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- COLUMN 1: Latest Artworks -->
+                <div class="flex flex-col space-y-5">
+                    <div class="flex items-center justify-between pb-3 border-b border-hairline">
+                        <h3 class="font-editorial text-2xl text-obsidian font-normal">Latest Artworks</h3>
+                        <div class="flex items-center gap-1">
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-left"></i>
+                            </button>
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <!-- Mini card 1 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Golden Dusk Impression" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-27706ac2b29443f7.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Golden Dusk Impression</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$85.00</span>
+                                <span class="text-[10px] text-taupeMuted uppercase tracking-wider mt-0.5">Original Oil on Canvas</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 2 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Sepia Fluid Composition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-11554f99fbde9138.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Sepia Fluid Composition</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$115.00</span>
+                                <span class="text-[10px] text-taupeMuted uppercase tracking-wider mt-0.5">Archival Giclée Print</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 3 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Misty Pines Diptych" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-f8b21ef590adaf4c.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Misty Pines Diptych</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$95.00</span>
+                                <span class="text-[10px] text-taupeMuted uppercase tracking-wider mt-0.5">Wood-Framed Watercolor</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- COLUMN 2: Top Rated Artworks -->
+                <div class="flex flex-col space-y-5">
+                    <div class="flex items-center justify-between pb-3 border-b border-hairline">
+                        <h3 class="font-editorial text-2xl text-obsidian font-normal">Top Rated Artworks</h3>
+                        <div class="flex items-center gap-1">
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-left"></i>
+                            </button>
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <!-- Mini card 1 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Nocturne in Ochre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-11554f99fbde9138.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex items-center text-antiqueBrass mb-0.5">
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                </div>
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Nocturne in Ochre</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-0.5">$145.00</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 2 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Solitude Geometrica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-27706ac2b29443f7.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex items-center text-antiqueBrass mb-0.5">
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                </div>
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Solitude Geometrica</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-0.5">$180.00</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 3 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Architectural Pure Linen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-f8b21ef590adaf4c.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex items-center text-antiqueBrass mb-0.5">
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                    <i class="w-3 h-3 fill-current" data-lucide="star"></i>
+                                </div>
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Architectural Pure Linen</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-0.5">$210.00</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- COLUMN 3: Review Artworks -->
+                <div class="flex flex-col space-y-5">
+                    <div class="flex items-center justify-between pb-3 border-b border-hairline">
+                        <h3 class="font-editorial text-2xl text-obsidian font-normal">Review Artworks</h3>
+                        <div class="flex items-center gap-1">
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-left"></i>
+                            </button>
+                            <button class="w-7 h-7 border border-hairline bg-alabaster hover:bg-stoneSurface text-obsidian flex items-center justify-center transition-colors">
+                                <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <!-- Mini card 1 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Renaissance Portico Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-11554f99fbde9138.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Renaissance Portico Study</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$220.00</span>
+                                <span class="text-[10px] text-taupeMuted mt-0.5 italic">"Stunning frame craftsmanship"</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 2 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden flex items-center justify-center">
+                                <svg class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <rect fill="#F4EFEA" height="80" width="80"></rect>
+                                    <circle cx="40" cy="40" fill="#B58E4C" opacity="0.4" r="28"></circle>
+                                    <rect fill="#1A1918" height="36" width="36" x="22" y="22"></rect>
+                                    <circle cx="40" cy="40" fill="#FAF8F5" r="8"></circle>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Monochrome Equilibrium</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$90.00</span>
+                                <span class="text-[10px] text-taupeMuted mt-0.5 italic">"Arrived flawlessly packaged"</span>
+                            </div>
+                        </a>
+                        <!-- Mini card 3 -->
+                        <a class="group flex items-center gap-4 p-2 bg-stoneSurface/40 border border-hairline hover:bg-stoneSurface transition-colors" href="#shop">
+                            <div class="w-20 h-20 bg-white p-1 border border-hairline flex-shrink-0 shadow-sm overflow-hidden">
+                                <img alt="Highland Mist Landscape" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="Images/image-f8b21ef590adaf4c.jpg" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h4 class="font-editorial text-base text-obsidian group-hover:text-terracotta transition-colors">Highland Mist Landscape</h4>
+                                <span class="text-xs font-semibold text-obsidian font-mono mt-1">$135.00</span>
+                                <span class="text-[10px] text-taupeMuted mt-0.5 italic">"Museum quality canvas texture"</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 7. FROM THE JOURNAL / BLOG (3-Column Editorial Grid) -->
+        <!-- ======================================================== -->
+        <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 border-t border-hairline" id="journal">
+            <!-- Centered Serif Heading with Terracotta Underline -->
+            <div class="text-center max-w-md mx-auto mb-12">
+                <span class="text-[11px] uppercase tracking-[0.25em] text-antiqueBrass font-semibold block mb-1">CURATORIAL ESSAYS</span>
+                <h2 class="font-editorial text-3xl sm:text-4xl text-obsidian font-normal">
+                    From The Journal
+                </h2>
+                <div class="w-12 h-[2px] bg-terracotta mx-auto mt-3"></div>
+            </div>
+            <!-- Three Equal Editorial Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="group flex flex-col bg-alabaster border border-hairline overflow-hidden transition-all duration-300 hover:border-obsidian">
+                    <!-- 16:9 Interior Design Photograph of Framed Art -->
+                    <div class="aspect-video w-full overflow-hidden bg-stoneSurface relative">
+                        <img alt="Interior Design Living Room with Framed Artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="Images/image-571cce0e2d8230ec.jpg" />
+                        <span class="absolute top-3 left-3 bg-alabaster/90 backdrop-blur-sm text-obsidian text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1">
+                            GUIDE
+                        </span>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="p-6 flex flex-col flex-1">
+                        <!-- Muted Metadata Row -->
+                        <div class="flex items-center gap-3 text-xs text-taupeMuted mb-3 font-sans">
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-antiqueBrass" data-lucide="calendar"></i> Nov 17, 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-hairline"></span>
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-taupeMuted" data-lucide="message-square"></i> 5 Comments</span>
+                        </div>
+                        <!-- Article Title -->
+                        <h3 class="font-editorial text-xl text-obsidian font-medium group-hover:text-terracotta transition-colors leading-snug mb-2">
+                            Proportions Guide: Sizing Art Above Your Sofa
+                        </h3>
+                        <!-- 2-Line Excerpt -->
+                        <p class="text-xs text-taupeMuted font-sans leading-relaxed line-clamp-2 mb-4">
+                            Mastering the two-thirds rule ensures your wall hanging anchors the room without overpowering delicate architectural molding.
+                        </p>
+                        <a class="mt-auto inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] font-bold text-obsidian group-hover:text-terracotta transition-colors" href="#">
+                            <span>Read Essay</span>
+                            <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Article 2 -->
+                <article class="group flex flex-col bg-alabaster border border-hairline overflow-hidden transition-all duration-300 hover:border-obsidian">
+                    <div class="aspect-video w-full overflow-hidden bg-stoneSurface relative flex items-center justify-center">
+                        <svg class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" viewbox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="wallWash" x1="0" x2="1" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#EFECE6"></stop>
+                                    <stop offset="100%" stop-color="#E2DDD5"></stop>
+                                </lineargradient>
+                                <lineargradient id="walnutWood" x1="0" x2="1" y1="0" y2="0">
+                                    <stop offset="0%" stop-color="#4A3525"></stop>
+                                    <stop offset="50%" stop-color="#674932"></stop>
+                                    <stop offset="100%" stop-color="#3D2B1E"></stop>
+                                </lineargradient>
+                            </defs>
+                            <rect fill="url(#wallWash)" height="270" width="480"></rect>
+                            <!-- Minimalist Wood moulding workbench illustration -->
+                            <line stroke="#D1CAC0" stroke-width="2" x1="0" x2="480" y1="190" y2="190"></line>
+                            <!-- Framed mouldings laying down -->
+                            <rect fill="#FAF8F5" height="120" rx="2" stroke="url(#walnutWood)" stroke-width="12" width="160" x="70" y="45"></rect>
+                            <rect fill="#E8E2D8" height="70" width="110" x="95" y="70"></rect>
+                            <circle cx="150" cy="105" fill="#B85233" opacity="0.8" r="20"></circle>
+                            <!-- Framing tools and angled mitre mouldings -->
+                            <rect fill="url(#walnutWood)" height="16" transform="rotate(-15 270 60)" width="140" x="270" y="60"></rect>
+                            <rect fill="#C2A675" height="14" transform="rotate(-25 250 110)" width="160" x="250" y="110"></rect>
+                            <rect fill="#8C6747" height="22" width="120" x="290" y="145"></rect>
+                            <!-- Archival label -->
+                            <rect fill="#1A1918" height="8" opacity="0.3" width="80" x="110" y="125"></rect>
+                        </svg>
+                        <span class="absolute top-3 left-3 bg-alabaster/90 backdrop-blur-sm text-obsidian text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1">
+                            MATERIALITY
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-taupeMuted mb-3 font-sans">
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-antiqueBrass" data-lucide="calendar"></i> Nov 12, 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-hairline"></span>
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-taupeMuted" data-lucide="message-square"></i> 8 Comments</span>
+                        </div>
+                        <h3 class="font-editorial text-xl text-obsidian font-medium group-hover:text-terracotta transition-colors leading-snug mb-2">
+                            The Craft of Handcrafted Wood Mouldings
+                        </h3>
+                        <p class="text-xs text-taupeMuted font-sans leading-relaxed line-clamp-2 mb-4">
+                            Why solid American walnut and natural ash frames protect archival oil works against seasonal humidity swings.
+                        </p>
+                        <a class="mt-auto inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] font-bold text-obsidian group-hover:text-terracotta transition-colors" href="#">
+                            <span>Read Essay</span>
+                            <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Article 3 -->
+                <article class="group flex flex-col bg-alabaster border border-hairline overflow-hidden transition-all duration-300 hover:border-obsidian">
+                    <div class="aspect-video w-full overflow-hidden bg-stoneSurface relative flex items-center justify-center">
+                        <svg class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" viewbox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
+                            <rect fill="#FAF8F5" height="270" width="480"></rect>
+                            <!-- Wall baseboard line -->
+                            <line stroke="#E2DDD5" stroke-width="3" x1="0" x2="480" y1="230" y2="230"></line>
+                            <!-- Eclectic gallery wall layout of frames -->
+                            <!-- Frame 1 -->
+                            <rect fill="#FFFFFF" height="130" stroke="#1A1918" stroke-width="4" width="100" x="50" y="40"></rect>
+                            <rect fill="#EFE2D5" height="106" width="76" x="62" y="52"></rect>
+                            <circle cx="100" cy="95" fill="#B85233" r="24"></circle>
+                            <!-- Frame 2 -->
+                            <rect fill="#FFFFFF" height="90" stroke="#B58E4C" stroke-width="3" width="130" x="170" y="30"></rect>
+                            <rect fill="#E3E6DF" height="70" width="110" x="180" y="40"></rect>
+                            <path d="M 195 90 L 225 60 L 255 85 L 280 55" fill="none" stroke="#2D3A30" stroke-width="2"></path>
+                            <!-- Frame 3 -->
+                            <rect fill="#FFFFFF" height="75" stroke="#1A1918" stroke-width="3" width="60" x="170" y="135"></rect>
+                            <rect fill="#FAF8F5" height="63" width="48" x="176" y="141"></rect>
+                            <circle cx="200" cy="172" fill="#1A1918" r="14"></circle>
+                            <!-- Frame 4 -->
+                            <rect fill="#FFFFFF" height="75" stroke="#8C6747" stroke-width="4" width="80" x="245" y="135"></rect>
+                            <rect fill="#F4EFEA" height="59" width="64" x="253" y="143"></rect>
+                            <rect fill="#B85233" height="35" opacity="0.7" width="40" x="265" y="155"></rect>
+                            <!-- Frame 5 -->
+                            <rect fill="#FFFFFF" height="120" stroke="#1A1918" stroke-width="4" width="90" x="345" y="50"></rect>
+                            <rect fill="#EFECE6" height="100" width="70" x="355" y="60"></rect>
+                            <circle cx="390" cy="100" fill="#B58E4C" r="20"></circle>
+                        </svg>
+                        <span class="absolute top-3 left-3 bg-alabaster/90 backdrop-blur-sm text-obsidian text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1">
+                            EXHIBITION
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-taupeMuted mb-3 font-sans">
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-antiqueBrass" data-lucide="calendar"></i> Nov 04, 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-hairline"></span>
+                            <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-taupeMuted" data-lucide="message-square"></i> 12 Comments</span>
+                        </div>
+                        <h3 class="font-editorial text-xl text-obsidian font-medium group-hover:text-terracotta transition-colors leading-snug mb-2">
+                            Harmonizing Mixed Mediums on a Gallery Wall
+                        </h3>
+                        <p class="text-xs text-taupeMuted font-sans leading-relaxed line-clamp-2 mb-4">
+                            How to pair energetic abstract acrylics alongside muted vintage landscape etchings without visual clutter.
+                        </p>
+                        <a class="mt-auto inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] font-bold text-obsidian group-hover:text-terracotta transition-colors" href="#">
+                            <span>Read Essay</span>
+                            <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- ======================================================== -->
+        <!-- 8. MULTI-COLUMN FOOTER -->
+        <!-- ======================================================== -->
+        <footer class="bg-stoneSurface border-t border-hairline pt-16 pb-12 text-obsidian" id="contact">
+            <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+                <!-- 3 Main Columns Split -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-14 border-b border-hairline">
+                    <!-- COLUMN 1: Brand Wordmark & Gallery Contact Info (4 of 12) -->
+                    <div class="md:col-span-4 flex flex-col space-y-4">
+                        <div class="flex flex-col">
+                            <span class="font-serif-display text-2xl tracking-[0.25em] font-semibold text-obsidian">
+                                ARTGANI
+                            </span>
+                            <span class="text-[9px] tracking-[0.35em] uppercase text-taupeMuted font-sans">
+                                FINE ART GALLERY &amp; FRAMEMAKERS
+                            </span>
+                        </div>
+                        <p class="text-xs text-taupeMuted max-w-sm leading-relaxed pt-1">
+                            Curating rare contemporary originals and archival museum reproductions with bespoke custom millwork for discerning collectors worldwide.
+                        </p>
+                        <div class="pt-2 flex flex-col space-y-2.5 text-xs text-taupeMuted font-sans">
+                            <div class="flex items-start gap-3">
+                                <i class="w-4 h-4 text-terracotta flex-shrink-0 mt-0.5" data-lucide="map-pin"></i>
+                                <span>60-49 Road 11378 New York, United States</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="w-4 h-4 text-terracotta flex-shrink-0" data-lucide="phone"></i>
+                                <span>+65 11.188.888</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="w-4 h-4 text-terracotta flex-shrink-0" data-lucide="mail"></i>
+                                <a class="hover:text-terracotta transition-colors" href="mailto:hello@artgani.com">hello@artgani.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COLUMN 2: Useful Links in Balanced Sub-Columns (4 of 12) -->
+                    <div class="md:col-span-4 flex flex-col space-y-4">
+                        <h4 class="font-editorial text-xl font-normal text-obsidian">Useful Links</h4>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-taupeMuted font-sans">
+                            <!-- Sub-col 1 -->
+                            <div class="flex flex-col space-y-2">
+                                <a class="hover:text-terracotta transition-colors" href="#">About Us</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">About Our Gallery</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Secure Shopping</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Delivery Information</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Privacy Policy</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Our Sitemap</a>
+                            </div>
+                            <!-- Sub-col 2 -->
+                            <div class="flex flex-col space-y-2">
+                                <a class="hover:text-terracotta transition-colors" href="#">Who We Are</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Our Services</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Projects</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Contact</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Innovation</a>
+                                <a class="hover:text-terracotta transition-colors" href="#">Testimonials</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COLUMN 3: Join Our Collector List (4 of 12) -->
+                    <div class="md:col-span-4 flex flex-col space-y-4">
+                        <h4 class="font-editorial text-xl font-normal text-obsidian">Join Our Collector List</h4>
+                        <p class="text-xs text-taupeMuted leading-relaxed">
+                            Receive private preview vernissages, private auction invites, and framing insights directly in your inbox.
+                        </p>
+                        <!-- Inline Email Input paired with Terracotta Button -->
+                        <form class="flex items-center w-full border border-hairline bg-white shadow-sm mt-1"data-form-action="prevent">
+                            <input class="w-full bg-transparent px-4 py-3 text-xs text-obsidian placeholder:text-taupeMuted/70 focus:outline-none" placeholder="Enter your email address" required="" type="email" />
+                            <button class="bg-terracotta hover:bg-terracottaHover text-white px-5 py-3 text-xs uppercase tracking-[0.18em] font-bold transition-colors whitespace-nowrap" type="submit">
+                                SUBSCRIBE
+                            </button>
+                        </form>
+                        <!-- 4 Minimalist Circular Social Icons -->
+                        <div class="pt-3">
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-taupeMuted block mb-2">Connect With The Curators</span>
+                            <div class="flex items-center gap-2.5">
+                                <a aria-label="Instagram" class="w-8 h-8 rounded-full border border-hairline bg-alabaster hover:bg-terracotta hover:text-white hover:border-terracotta text-obsidian flex items-center justify-center transition-all" href="#">
+                                    <i class="w-3.5 h-3.5" data-lucide="instagram"></i>
+                                </a>
+                                <a aria-label="Pinterest" class="w-8 h-8 rounded-full border border-hairline bg-alabaster hover:bg-terracotta hover:text-white hover:border-terracotta text-obsidian flex items-center justify-center transition-all" href="#">
+                                    <i class="w-3.5 h-3.5" data-lucide="pin"></i>
+                                </a>
+                                <a aria-label="Facebook" class="w-8 h-8 rounded-full border border-hairline bg-alabaster hover:bg-terracotta hover:text-white hover:border-terracotta text-obsidian flex items-center justify-center transition-all" href="#">
+                                    <i class="w-3.5 h-3.5" data-lucide="facebook"></i>
+                                </a>
+                                <a aria-label="Twitter" class="w-8 h-8 rounded-full border border-hairline bg-alabaster hover:bg-terracotta hover:text-white hover:border-terracotta text-obsidian flex items-center justify-center transition-all" href="#">
+                                    <i class="w-3.5 h-3.5" data-lucide="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Copyright & Payment Badges -->
+                <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-taupeMuted">
+                    <p>© 2026 ARTGANI Curated Fine Art Gallery. All rights reserved. Archival authenticity certified.</p>
+                    <!-- Clean Payment Provider Badges (Visa, Mastercard, Paypal, Amex) -->
+                    <div class="flex items-center gap-2 font-mono text-[10px] uppercase font-bold tracking-wider">
+                        <span class="px-2.5 py-1 bg-white border border-hairline text-obsidian">VISA</span>
+                        <span class="px-2.5 py-1 bg-white border border-hairline text-obsidian">MC</span>
+                        <span class="px-2.5 py-1 bg-white border border-hairline text-obsidian">PAYPAL</span>
+                        <span class="px-2.5 py-1 bg-white border border-hairline text-obsidian">AMEX</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ======================================================== -->
+        <!-- LIGHTWEIGHT VANILLA JAVASCRIPT FOR INTERACTIVE POLISH -->
+        <!-- ======================================================== -->
+
+    </body>
+
+</html>

@@ -1,0 +1,53 @@
+body {
+    background-color: #FAF8F5;
+    color: #1A1918;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Subtle artwork frame shadow */
+.art-shadow {
+    box-shadow: 0 10px 30px -10px rgba(26, 25, 24, 0.12), 0 4px 12px rgba(26, 25, 24, 0.05);
+}
+
+.art-frame-deep {
+    box-shadow: 0 20px 40px -15px rgba(26, 25, 24, 0.22), 0 0 0 1px rgba(26, 25, 24, 0.08);
+}
+
+.hairline-border {
+    border: 1px solid #E2DDD5;
+}
+
+/* Category list item hover transition */
+.cat-item-hover:hover {
+    background-color: #FAF8F5;
+    padding-left: 1.25rem;
+    color: #B85233;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E2DDD5;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B85233;
+}

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARTGANI — Contact & Gallery Location</title>
+        <!-- Google Fonts: Cormorant Garamond / Playfair Display & DM Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+            <link rel="stylesheet" href="Styles/contact.css" />
+        <script src="Scripts/contact.js"></script>
+</head>
+
+    <body class="min-h-screen flex flex-col bg-alabaster">
+
+        <!-- 1. TOP UTILITY STRIP -->
+        <header class="w-full">
+            <div class="bg-stoneSurface border-b border-hairline py-2 px-4 sm:px-8 text-xs font-normal text-taupeText">
+                <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+                    <!-- Left: Email & Shipping -->
+                    <div class="flex items-center space-x-6">
+                        <a href="mailto:hello@artgani.com" class="flex items-center gap-1.5 hover:text-obsidian transition-colors">
+                            <svg class="w-3.5 h-3.5 text-taupeText" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>hello@artgani.com</span>
+                        </a>
+                        <span class="hidden md:inline-block text-hairline">|</span>
+                        <span class="hidden md:flex items-center gap-1.5">
+                            <svg class="w-3.5 h-3.5 text-antiqueBrass" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <span>Complimentary Insured Shipping on Orders Over $99</span>
+                        </span>
+                    </div>
+
+                    <!-- Right: Social, Language & Login -->
+                    <div class="flex items-center space-x-6">
+                        <div class="flex items-center space-x-3 text-taupeText">
+                            <!-- Instagram -->
+                            <a href="#" class="hover:text-obsidian transition-colors" title="Instagram">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <!-- Pinterest -->
+                            <a href="#" class="hover:text-obsidian transition-colors" title="Pinterest">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 12-5.373 12-12 0-6.628-5.393-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <span class="text-hairline">|</span>
+                        <div class="flex items-center gap-1 cursor-pointer hover:text-obsidian">
+                            <span>English</span>
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <span class="text-hairline">|</span>
+                        <a href="#" class="flex items-center gap-1 hover:text-obsidian transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                            <span>Login</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN HEADER NAVIGATION -->
+            <div class="bg-alabaster border-b border-hairline py-5 px-4 sm:px-8">
+                <div class="max-w-7xl mx-auto flex items-center justify-between">
+                    <!-- Brand Wordmark -->
+                    <a href="#" class="flex flex-col">
+                        <span class="font-brand text-2xl md:text-3xl font-bold tracking-[0.2em] text-obsidian uppercase">ARTGANI</span>
+                        <span class="text-[9px] tracking-[0.3em] text-taupeText uppercase font-sans -mt-1">Fine Art & Framing</span>
+                    </a>
+
+                    <!-- Center Menu -->
+                    <nav class="hidden md:flex items-center space-x-10 text-[13px] font-medium tracking-[0.15em] text-obsidian">
+                        <a href="index.html" class="hover:text-terracotta transition-colors">HOME</a>
+                        <a href="page.html" class="hover:text-terracotta transition-colors">SHOP</a>
+                        <div class="relative group py-1"><button type="button" class="hover:text-terracotta transition-colors flex items-center gap-1">PAGES <span aria-hidden="true">v</span></button><div class="absolute top-full left-0 z-50 w-48 rounded-sm bg-obsidian py-2 text-alabaster shadow-xl opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible"><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shop-detail.html">Shop Detail</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="shopping-cart.html">Shopping Cart</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="checkout.html">Checkout</a><a class="block px-4 py-2 text-xs hover:text-terracotta" href="blog-detail.html">Blog Details</a></div></div>
+                        <a href="blog.html" class="hover:text-terracotta transition-colors">BLOG</a>
+                        <!-- ACTIVE CONTACT TAB -->
+                        <a href="contact.html" class="text-terracotta font-semibold relative py-1">
+                            CONTACT
+                            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-terracotta"></span>
+                        </a>
+                    </nav>
+
+                    <!-- Right: Wishlist, Cart & Price Total -->
+                    <div class="flex items-center space-x-6">
+                        <!-- Wishlist -->
+                        <a href="#" class="relative p-1 text-obsidian hover:text-terracotta transition-colors" title="Wishlist">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                            <span class="absolute -top-1.5 -right-2 bg-terracotta text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">1</span>
+                        </a>
+
+                        <!-- Cart Bag & Amount -->
+                        <a href="#" class="flex items-center gap-3 group">
+                            <div class="relative p-1 text-obsidian group-hover:text-terracotta transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                                <span class="absolute -top-1.5 -right-2 bg-terracotta text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+                            </div>
+                            <div class="hidden lg:flex flex-col text-left">
+                                <span class="text-[10px] uppercase tracking-wider text-taupeText font-medium">Cart Value</span>
+                                <span class="text-xs font-semibold text-obsidian">item: <span class="text-terracotta font-bold">$150.00</span></span>
+                            </div>
+                        </a>
+
+                        <!-- Mobile Hamburger -->
+                        <button class="md:hidden p-1.5 text-obsidian focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPACT SUB-HEADER SEARCH & DEPARTMENT ROW -->
+            <div class="bg-alabaster border-b border-hairline py-3 px-4 sm:px-8">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                    <!-- 25% Left: Collapsed All Departments -->
+                    <div class="w-full md:w-1/4">
+                        <button class="w-full bg-obsidian text-white px-5 py-3.5 flex items-center justify-between text-xs font-medium tracking-[0.15em] uppercase hover:bg-black transition-colors rounded-none">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                                <span>All Departments</span>
+                            </div>
+                            <svg class="w-3.5 h-3.5 text-stoneSurface" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- 75% Right: Search Form & Support Badge -->
+                    <div class="w-full md:w-3/4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <!-- Search Bar -->
+                        <div class="w-full sm:flex-1 flex border border-hairline bg-white shadow-sm">
+                            <div class="relative hidden lg:flex items-center px-4 border-r border-hairline bg-alabaster">
+                                <select class="text-xs text-obsidian bg-transparent font-medium pr-6 py-2.5 focus:outline-none cursor-pointer appearance-none">
+                                    <option>All Categories</option>
+                                    <option>Oil Paintings</option>
+                                    <option>Abstract Art</option>
+                                    <option>Landscape</option>
+                                    <option>Minimalist</option>
+                                </select>
+                                <svg class="w-3 h-3 absolute right-3 pointer-events-none text-taupeText" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Search by artist, style, or subject..." class="w-full px-4 py-2.5 text-xs text-obsidian placeholder-taupeText focus:outline-none bg-transparent">
+                            <button class="bg-terracotta hover:bg-terracottaHover text-white px-7 py-2.5 text-xs font-semibold tracking-widest uppercase transition-colors">
+                                Search
+                            </button>
+                        </div>
+
+                        <!-- Curator Support Badge -->
+                        <div class="flex items-center gap-3 shrink-0">
+                            <div class="w-10 h-10 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs font-bold text-obsidian tracking-wide">+65 11.188.888</div>
+                                <div class="text-[10px] text-taupeText uppercase tracking-wider font-medium">Curator support 24/7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. FULL-WIDTH PAGE BREADCRUMB BANNER -->
+        <section class="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-obsidian flex items-center justify-center text-center">
+            <!-- Atmospheric Background Image with Vignette Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="Images/image-a19624f704723104.jpg" alt="ARTGANI Gallery Exhibition Interior" class="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity filter brightness-75 contrast-125">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/60 to-obsidian/40"></div>
+            </div>
+
+            <!-- Banner Content -->
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <div class="text-[11px] uppercase tracking-[0.25em] text-terracotta font-semibold mb-2">Concierge & Bespoke Inquiries</div>
+                <h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-white font-normal tracking-wide">Contact Us</h1>
+                <div class="mt-3 flex items-center justify-center space-x-2 text-xs font-medium tracking-[0.18em] uppercase text-stoneSurface/80">
+                    <a href="#" class="hover:text-white transition-colors">Home</a>
+                    <span class="text-hairline">—</span>
+                    <span class="text-white font-semibold">Contact Us</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FOUR-COLUMN GALLERY CONTACT INFO ROW -->
+        <section class="py-16 md:py-20 bg-alabaster border-b border-hairline">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+
+                    <!-- Column 1: Phone -->
+                    <div class="flex flex-col items-center text-center group p-6 rounded-none border border-transparent hover:border-hairline transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta mb-5 group-hover:bg-terracotta group-hover:text-white group-hover:border-terracotta transition-colors duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-obsidian tracking-wide mb-2">Phone</h3>
+                        <p class="text-sm font-sans text-taupeText font-normal tracking-wide">+01-3-8888-6868</p>
+                        <span class="text-[11px] text-taupeText/70 mt-1">Direct Curator Line</span>
+                    </div>
+
+                    <!-- Column 2: Address -->
+                    <div class="flex flex-col items-center text-center group p-6 rounded-none border border-transparent hover:border-hairline transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta mb-5 group-hover:bg-terracotta group-hover:text-white group-hover:border-terracotta transition-colors duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-obsidian tracking-wide mb-2">Address</h3>
+                        <p class="text-sm font-sans text-taupeText font-normal tracking-wide">60-49 Road 11378 New York</p>
+                        <span class="text-[11px] text-taupeText/70 mt-1">Artisan Framing Pavilion</span>
+                    </div>
+
+                    <!-- Column 3: Open time -->
+                    <div class="flex flex-col items-center text-center group p-6 rounded-none border border-transparent hover:border-hairline transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta mb-5 group-hover:bg-terracotta group-hover:text-white group-hover:border-terracotta transition-colors duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-obsidian tracking-wide mb-2">Open time</h3>
+                        <p class="text-sm font-sans text-taupeText font-normal tracking-wide">10:00 am to 23:00 pm</p>
+                        <span class="text-[11px] text-taupeText/70 mt-1">Monday through Sunday</span>
+                    </div>
+
+                    <!-- Column 4: Email -->
+                    <div class="flex flex-col items-center text-center group p-6 rounded-none border border-transparent hover:border-hairline transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-stoneSurface border border-hairline flex items-center justify-center text-terracotta mb-5 group-hover:bg-terracotta group-hover:text-white group-hover:border-terracotta transition-colors duration-300 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-obsidian tracking-wide mb-2">Email</h3>
+                        <p class="text-sm font-sans text-taupeText font-normal tracking-wide">hello@artgani.com</p>
+                        <span class="text-[11px] text-taupeText/70 mt-1">Response within 2 hours</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FULL-WIDTH INTERACTIVE MAP SECTION -->
+        <section class="relative w-full h-[400px] md:h-[480px] bg-[#E8E5DF] overflow-hidden border-b border-hairline">
+            <!-- Warm Desaturated Architectural Street Map Graphic Base -->
+            <div class="absolute inset-0 map-grid-pattern opacity-95">
+                <!-- Simulated River & Urban Arteries -->
+                <svg class="w-full h-full opacity-60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- River / Waterfront path -->
+                    <path d="M-50,220 C200,260 400,140 700,290 C950,420 1200,210 1600,270" fill="none" stroke="#D3CEBF" stroke-width="32" stroke-linecap="round" />
+                    <!-- Main Boulevard 1 -->
+                    <line x1="-50" y1="90" x2="1600" y2="400" stroke="#FFFFFF" stroke-width="7" />
+                    <line x1="-50" y1="90" x2="1600" y2="400" stroke="#D9D5CC" stroke-width="9" stroke-dasharray="8 8" />
+                    <!-- Avenue 2 -->
+                    <line x1="300" y1="-50" x2="650" y2="600" stroke="#FFFFFF" stroke-width="6" />
+                    <!-- Avenue 3 -->
+                    <line x1="850" y1="-50" x2="800" y2="600" stroke="#FFFFFF" stroke-width="6" />
+                    <!-- Cross streets -->
+                    <line x1="150" y1="500" x2="1400" y2="50" stroke="#F4F2EC" stroke-width="4" />
+                    <line x1="50" y1="350" x2="1200" y2="30" stroke="#F4F2EC" stroke-width="3" />
+                    <line x1="600" y1="550" x2="1500" y2="150" stroke="#F4F2EC" stroke-width="4" />
+                    <!-- Park district greening -->
+                    <rect x="240" y="80" width="160" height="90" rx="4" fill="#DFE2D8" opacity="0.75" />
+                    <rect x="920" y="240" width="220" height="130" rx="4" fill="#DFE2D8" opacity="0.75" />
+                    <text x="260" y="130" font-family="'DM Sans', sans-serif" font-size="11" fill="#88907E" font-weight="500" letter-spacing="1">MUSEUM PARK</text>
+                </svg>
+            </div>
+
+            <!-- Centered Location Card Tooltip & Terracotta Marker -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none p-4">
+                <!-- Floating Alabaster Tooltip Card -->
+                <div class="pointer-events-auto bg-alabaster/95 backdrop-blur-sm border border-hairline shadow-2xl px-6 py-5 max-w-sm w-full text-center relative mb-4 transition-transform hover:-translate-y-1 duration-200">
+                    <!-- Close decorative tag -->
+                    <div class="text-[9px] uppercase tracking-[0.2em] font-bold text-terracotta mb-1">Flagship Pavilion</div>
+                    <h4 class="font-editorial text-2xl font-bold text-obsidian tracking-wide">New York Gallery</h4>
+                    <div class="mt-2.5 space-y-1 text-xs text-taupeText font-sans">
+                        <p class="flex items-center justify-center gap-1.5 font-medium text-obsidian">
+                            <svg class="w-3.5 h-3.5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>Phone: +12-345-6705</span>
+                        </p>
+                        <p class="text-taupeText">Add: 16 Creek Ave, Farmingdale, NY</p>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-hairline flex items-center justify-between text-[11px]">
+                        <span class="text-antiqueBrass font-medium flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block"></span>
+                            Open for Private Viewing
+                        </span>
+                        <a href="#" class="text-terracotta hover:underline font-semibold tracking-wider uppercase text-[10px]">Get Directions →</a>
+                    </div>
+
+                    <!-- Triangle pointer downwards -->
+                    <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-alabaster rotate-45 border-r border-b border-hairline"></div>
+                </div>
+
+                <!-- Map Pin Marker with Terracotta Pulse Effect -->
+                <div class="relative flex items-center justify-center">
+                    <!-- Outer pulsating aura -->
+                    <div class="absolute w-12 h-12 rounded-full bg-terracotta/30 pin-pulse"></div>
+                    <!-- Solid Marker Anchor -->
+                    <div class="relative z-10 w-9 h-9 bg-terracotta text-white rounded-full shadow-lg flex items-center justify-center border-2 border-white cursor-pointer hover:scale-110 transition-transform pointer-events-auto">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Controls Mockup (Top Right) -->
+            <div class="absolute top-4 right-4 flex flex-col space-y-1 shadow-md bg-white border border-hairline">
+                <button class="w-8 h-8 flex items-center justify-center text-obsidian hover:bg-stoneSurface text-sm font-bold border-b border-hairline">+</button>
+                <button class="w-8 h-8 flex items-center justify-center text-obsidian hover:bg-stoneSurface text-sm font-bold">−</button>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT & CUSTOM COMMISSION FORM ("LEAVE MESSAGE") -->
+        <section class="py-20 md:py-24 bg-alabaster">
+            <div class="max-w-4xl mx-auto px-4 sm:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <div class="text-[11px] uppercase tracking-[0.25em] text-terracotta font-semibold mb-2">Curatorial Dialogue</div>
+                    <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-obsidian tracking-wide">Leave Message</h2>
+                    <div class="w-12 h-[2px] bg-terracotta mx-auto mt-4 mb-3"></div>
+                    <p class="text-xs sm:text-sm text-taupeText max-w-lg mx-auto font-sans">
+                        Connect with our head curator for acquisition inquiries, private viewings, or bespoke architectural scale commissions.
+                    </p>
+                </div>
+
+                <!-- Interactive Form Container -->
+                <form class="space-y-6"data-form-action="contact">
+
+                    <!-- Top Input Row: 2 Equal Columns -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider font-semibold text-obsidian mb-2">Full Name *</label>
+                            <input type="text" required placeholder="Your name" class="w-full bg-white border border-hairline px-4 py-3.5 text-xs text-obsidian placeholder-taupeText/60 focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-colors shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider font-semibold text-obsidian mb-2">Email Address *</label>
+                            <input type="email" required placeholder="Your Email" class="w-full bg-white border border-hairline px-4 py-3.5 text-xs text-obsidian placeholder-taupeText/60 focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-colors shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- Optional Subject / Inquiry Department -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider font-semibold text-obsidian mb-2">Phone Number (Optional)</label>
+                            <input type="tel" placeholder="+1 (555) 000-0000" class="w-full bg-white border border-hairline px-4 py-3.5 text-xs text-obsidian placeholder-taupeText/60 focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-colors shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider font-semibold text-obsidian mb-2">Inquiry Type</label>
+                            <div class="relative">
+                                <select class="w-full bg-white border border-hairline px-4 py-3.5 text-xs text-obsidian focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-colors appearance-none cursor-pointer shadow-sm">
+                                    <option>Custom Architectural Commission</option>
+                                    <option>Original Fine Art Acquisition</option>
+                                    <option>Private Gallery Viewing Appointment</option>
+                                    <option>Bespoke Framing & Millwork</option>
+                                    <option>Corporate / Hotel Art Consultation</option>
+                                </select>
+                                <svg class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-taupeText pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Row: Textarea -->
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider font-semibold text-obsidian mb-2">Message & Specifications *</label>
+                        <textarea rows="5" required placeholder="Your message or custom painting inquiry" class="w-full bg-white border border-hairline p-4 text-xs text-obsidian placeholder-taupeText/60 focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-colors shadow-sm resize-none"></textarea>
+                    </div>
+
+                    <!-- Bottom Row: Submit Button -->
+                    <div class="text-center pt-4">
+                        <button type="submit" class="w-full sm:w-auto min-w-[240px] bg-terracotta hover:bg-terracottaHover text-white px-10 py-4 text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">
+                            SEND MESSAGE
+                        </button>
+                        <div class="mt-3 text-[11px] text-taupeText flex items-center justify-center gap-1.5">
+                            <svg class="w-3.5 h-3.5 text-antiqueBrass" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                            <span>Archival privacy guaranteed. We never share collector details.</span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- 6. MULTI-COLUMN FOOTER (IDENTICAL TO HOME, SHOP, AND BLOG) -->
+        <footer class="bg-stoneSurface border-t border-hairline mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+
+                    <!-- Column 1: Provenance & Contact (5 cols) -->
+                    <div class="md:col-span-4 space-y-4">
+                        <div class="flex flex-col">
+                            <span class="font-brand text-2xl font-bold tracking-[0.2em] text-obsidian uppercase">ARTGANI</span>
+                            <span class="text-[9px] tracking-[0.25em] text-taupeText uppercase font-sans -mt-1">Fine Art Gallery & Framemakers</span>
+                        </div>
+                        <p class="text-xs text-taupeText leading-relaxed max-w-sm">
+                            Curating rare contemporary originals and archival museum reproductions with bespoke custom millwork for discerning collectors worldwide.
+                        </p>
+                        <div class="pt-2 space-y-2 text-xs text-obsidian">
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span>60-49 Road 11378 New York, United States</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <span>+65 11.188.888</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <a href="mailto:hello@artgani.com" class="hover:text-terracotta transition-colors">hello@artgani.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Useful Links in 2 Sub-Columns (4 cols) -->
+                    <div class="md:col-span-4">
+                        <h4 class="font-editorial text-lg font-bold text-obsidian tracking-wide mb-4">Useful Links</h4>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-taupeText">
+                            <a href="#" class="hover:text-obsidian transition-colors">About Us</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Who We Are</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">About Our Gallery</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Our Services</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Secure Shopping</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Projects</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Delivery Information</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Contact</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Privacy Policy</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Innovation</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Our Sitemap</a>
+                            <a href="#" class="hover:text-obsidian transition-colors">Testimonials</a>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Join Our Collector List (4 cols) -->
+                    <div class="md:col-span-4 space-y-4">
+                        <h4 class="font-editorial text-lg font-bold text-obsidian tracking-wide">Join Our Collector List</h4>
+                        <p class="text-xs text-taupeText leading-relaxed">
+                            Receive private preview vernissages, private auction invites, and framing insights directly in your inbox.
+                        </p>
+                        <form class="flex w-full"data-form-action="subscribe">
+                            <input type="email" placeholder="Enter your email address" class="w-full bg-white border border-hairline px-3.5 py-2.5 text-xs text-obsidian placeholder-taupeText/70 focus:outline-none focus:border-terracotta" required>
+                            <button type="submit" class="bg-terracotta hover:bg-terracottaHover text-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors shrink-0">
+                                Subscribe
+                            </button>
+                        </form>
+                        <div class="pt-2">
+                            <div class="text-[10px] uppercase tracking-wider text-taupeText font-semibold mb-2">Connect with the Curators</div>
+                            <div class="flex items-center space-x-3 text-obsidian">
+                                <!-- Facebook -->
+                                <a href="#" class="w-8 h-8 rounded-full bg-alabaster border border-hairline flex items-center justify-center text-taupeText hover:text-obsidian hover:border-obsidian transition-colors">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                    </svg>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="#" class="w-8 h-8 rounded-full bg-alabaster border border-hairline flex items-center justify-center text-taupeText hover:text-obsidian hover:border-obsidian transition-colors">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
+                                <!-- Pinterest -->
+                                <a href="#" class="w-8 h-8 rounded-full bg-alabaster border border-hairline flex items-center justify-center text-taupeText hover:text-obsidian hover:border-obsidian transition-colors">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 12-5.373 12-12 0-6.628-5.393-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Copyright & Payment Provider Badges -->
+                <div class="mt-12 pt-6 border-t border-hairline flex flex-col sm:flex-row items-center justify-between text-xs text-taupeText gap-4">
+                    <div>
+                        © 2026 ARTGANI Curated Fine Art Gallery. All rights reserved. Archival authenticity certified.
+                    </div>
+                    <div class="flex items-center space-x-2 text-[10px] font-semibold">
+                        <span class="px-2 py-1 bg-alabaster border border-hairline rounded text-taupeText">VISA</span>
+                        <span class="px-2 py-1 bg-alabaster border border-hairline rounded text-taupeText">MC</span>
+                        <span class="px-2 py-1 bg-alabaster border border-hairline rounded text-taupeText">PAYPAL</span>
+                        <span class="px-2 py-1 bg-alabaster border border-hairline rounded text-taupeText">AMEX</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

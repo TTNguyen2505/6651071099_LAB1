@@ -1,0 +1,22 @@
+body {
+    background-color: #FAF8F5;
+    color: #1A1918;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-title {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+input[type="checkbox"] {
+    accent-color: #B85233;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #B85233;
+    box-shadow: 0 0 0 1px #B85233;
+}

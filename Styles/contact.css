@@ -1,0 +1,50 @@
+body {
+    background-color: #FAF8F5;
+    color: #1A1918;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-editorial {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.font-brand {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.18em;
+}
+
+/* Map styling simulated vector art aesthetic */
+.map-grid-pattern {
+    background-color: #e5e3de;
+    background-image:
+        linear-gradient(#dad6ce 1.5px, transparent 1.5px),
+        linear-gradient(90deg, #dad6ce 1.5px, transparent 1.5px),
+        linear-gradient(#ebe8e2 1px, transparent 1px),
+        linear-gradient(90deg, #ebe8e2 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+/* Pulse ring for map pin */
+@keyframes pin-pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+}
+
+.pin-pulse {
+    animation: pin-pulse 2.5s infinite ease-in-out;
+}

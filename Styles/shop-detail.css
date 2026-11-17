@@ -1,0 +1,21 @@
+body {
+    background-color: #FAF8F5;
+    color: #1A1918;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Subtle hover dropdown styling for navigation */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
